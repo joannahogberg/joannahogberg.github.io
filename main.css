@@ -1,0 +1,72 @@
+@charset "UTF-8";
+nav {
+    padding: 0.1%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+#globalnav li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#globalnav a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 2%;
+}
+
+#globalnav a:link,
+#globalnav a:visited {
+    color: black;
+}
+
+#globalnav a:active,
+#globalnav a:hover {
+    color: ghostwhite;
+}
+
+header h1 {
+    font-size: 3.2em;
+    text-align: center;
+    padding-top: 45px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(pics/background_2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#profilepic {
+    float: left;
+    width: 25%;
+    border-radius: 5px;
+}
+
+#pres {
+    color: ghostwhite;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    float: right;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1%;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    box-shadow: 6px 6px 30px ghostwhite;
+    margin-bottom: 20px;
+}
+
+
+/*kommentar*/
