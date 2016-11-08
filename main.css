@@ -57,6 +57,7 @@ body {
     background-image: url(pics/background_2.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100%;
 }
 
 main {
