@@ -1,20 +1,64 @@
 @charset "UTF-8";
-nav {
-    padding: 0.1%;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+html {
+    height: 100%;
 }
 
-#globalnav li {
-    display: inline;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Josefin Slab', serif;
+    background-color: #111;
+    font-size: 14px;
+    text-align: center;
+    align-content: center;
+}
+
+#wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    background-image: url(pics/background_2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+#topNav {
+    display: flex;
+    background-color: rgba(1, 83, 85, 0.3);
+    border-radius: 5px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#globalnav {
+    display: flex;
+    list-style: none;
+}
+
+.flexNav {
+    display: flex;
+    margin: 1em;
+}
+
+#myProjects {
+    padding-left: 1em;
+    padding-right: 1em;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 #globalnav a {
     text-decoration: none;
     font-size: 1.2em;
-    font-weight: bold;
-    margin-left: 2%;
+    cursor: pointer;
 }
 
 #globalnav a:link,
@@ -27,75 +71,90 @@ nav {
     color: ghostwhite;
 }
 
-#linkedin {
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #111;
+    color: white;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    margin: 0 auto;
+    clear: both;
+    background-position: bottom;
+}
+
+
+/* clear both för att footer skall hamna under nav/main */
+
+#social {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+#linkedin,
+#github {
     width: 3em;
 }
 
 #github {
-    width: 3em;
+    margin-left: 0.5em;
 }
 
 header h1 {
     font-size: 3.2em;
     text-align: center;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 0;
     margin-top: 0;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 header h2 {
     font-size: 1.2em;
     text-align: center;
     color: darkslategray;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
     margin-bottom: 25px;
-}
-
-body {
-    background-image: url(pics/background_2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100%;
+    font-family: 'Source Code Pro', monospace;
 }
 
 main {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+    display: flex;
 }
 
 #profilepic {
-    float: left;
-    width: 25%;
-    margin-bottom: 10px;
-    border: 2px solid darkslategray;
-    border-radius: 5px;
+    display: flex;
+    flex: 1;
+    margin: 3em;
+    margin-left: 0;
+    background-image: url(pics/profilepic.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 #pres {
     color: ghostwhite;
     background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    float: right;
-    width: 70%;
-    margin: 0 auto;
+    flex-direction: column;
+    display: flex;
+    flex: 3;
     padding: 1%;
-    border: 2px solid darkslategray;
+    border: 2px solid #015355;
     border-radius: 5px;
     margin-bottom: 20px;
     font-size: 1em;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
 }
 
 #email {
     text-decoration: none;
     color: #FFF;
 }
-
-
-
 
 
 /* make keyframes that tell the start state and the end state of our object */
@@ -148,4 +207,79 @@ main {
     -moz-animation-delay: 0.7s;
     animation-delay: 0.7s;
 }
-/*Kommentar*/
+
+
+/*inställningar för slidebar för projekt*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    font-size: 1.5em;
+    color: rgba(1, 135, 154, 0.9);
+}
+
+#close:hover {
+    font-size: 3em;
+    color: mediumvioletred;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 3em;
+    margin-left: 50px;
+}
+
+#slideNav {
+    transition: margin-left .5s;
+}
+
+
+/*inställningar mediaQueries*/
+
+@media screen and (max-width: 600px) {
+    #profilepic {
+        visibility: hidden;
+        display: none;
+    }
+    #pres {
+        margin: 0;
+        margin-top: 1em;
+    }
+    #social {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding: 0.5em;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
