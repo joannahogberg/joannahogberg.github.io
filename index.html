@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- kommentar -->
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css">
-
+    <script type="text/javascript" src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Lato|Source+Code+Pro" rel="stylesheet">
     <title>Joanna Högberg</title>
 </head>
 
 <body>
     <div id="wrapper">
-
-        <a target="blank" href="https://www.linkedin.com/in/joanna-högberg-b19276106?trk=nav_responsive_tab_profile"><img src="pics/linkedin.jpg" alt="linkedin_logo" id="linkedin"></a>
-        <a target="blank" href="https://github.com/joannahogberg"><img src="pics/github.jpg" alt="linkedin_logo" id="github"></a>
-
-        <header>
-            <h1>JOANNA HÖGBERG</h1>
-            <h2>–– FRONT-END DEVELOPER STUDENT ––</h2>
-
-        </header>
-
-        <nav class="fade-in one">
-            <ul id="globalnav">
-                <li><a>ABOUT</a></li>
-                <li><a target="_blank" href="https://github.com/joannahogberg">MY PROJECTS</a></li>
-                <li><a target="_blank" href="https://github.com/joannahogberg">PLAY MEMO</a></li>
-            </ul>
-
-
-        </nav>
-        <!--end navigering-->
-
-        <main>
-
-            <div id="pres" class="fade-in one">
-
-                <h1>To make the story short:</h1>
-                <p>I have a burning passion for the web and how we can continue making it better every day. I enjoy turning complex problems into simple, beautiful and intuitive interface designs with a focus on writing clean and efficient code.</p>
-                <p>When I'm not all caught up in my code I love being out in the wild or on a plane heading to one of the worlds great cities.</p>
-
-                <p>My future goal is to be involved in projects that I can be proud of, join an amazing team and advance my development skills. If you're interested in helping me make this happen, <a href="mailto:joanna.hogberg@gmail.com" id="email" title="Send me an email">let's get in touch.</a></p>
+        <div id="slideNav">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="close" onclick="closeNav()">&times;</a>
+                <a target="blank" href="https://joannahogberg.github.io/Pattis-ToDo-app/" class="project" id="0">MY ToDo LIST</a>
+                <a target="blank" href="https://joannahogberg.github.io/Pattis-Food-Generator/">FOOD GENERATOR</a>
+                <a target="blank" href="https://joannahogberg.github.io/Pattis-Memory-Game/">MEMORY GAME</a>
             </div>
 
-            <img src="pics/profilepic.jpg" alt="profilbild" id="profilepic" class="fade-in one">
+            <div id="social">
+                <a target="blank" href="https://www.linkedin.com/in/joanna-högberg-b19276106?trk=nav_responsive_tab_profile"><img src="pics/linkedin.jpg" alt="linkedin_logo" id="linkedin"></a>
+                <a target="blank" href="https://github.com/joannahogberg"><img src="pics/github.jpg" alt="linkedin_logo" id="github"></a>
+            </div>
 
+            <header>
+                <h1>JOANNA HÖGBERG</h1>
+                <h2>–Front End Developer–</h2>
+            </header>
+            <div class="fade-in one" id="topNav">
+                <nav class="fade-in one" id="globalnav">
+                    <li class="flexNav"><a>ABOUT</a></li>
+                    <li class="flexNav" id="myProjects">
+                        <a><span onclick="openNav()">MY PROJECTS</span></a>
+                    </li>
+                    <li class="flexNav"><a href="mailto:joanna.hogberg@gmail.com" id="email" title="Send me an email">CONTACT</a></li>
+                </nav>
+            </div>
+            <main>
+                <div id="pres" class="fade-in one">
+                    <h1>To make the story short:</h1>
+                    <p>I have a burning passion for the web and how we can continue making it better every day. I enjoy turning complex problems into simple, beautiful and intuitive interface designs with a focus on writing clean and efficient code.</p>
+                    <p>When I'm not all caught up in my code I love being out in the wild or on a plane heading to one of the worlds great cities.</p>
+                    <p>My future goal is to be involved in projects that I can be proud of, join an amazing team and advance my development skills. If you're interested in helping me make this happen, <a href="mailto:joanna.hogberg@gmail.com" id="email"
+                            title="Send me an email">let's get in touch.</a></p>
+                </div>
+                <div class="fade-in one" id="profilepic">
+                </div>
 
-        </main>
+            </main>
+        </div>
+        <!--end slideNav-->
     </div>
+    <!--end wrapper-->
+
+
+
 
     <footer>
-
+        &copy;Joanna Högberg
     </footer>
 </body>
 
