@@ -11,7 +11,8 @@ body {
     min-height: 100%;
     width: 100%;
     font-family: 'Josefin Slab', serif;
-    background-color: #111;
+    /*background-color: #111;*/
+    background: white;
     font-size: 14px;
     text-align: center;
     padding: 0;
@@ -22,22 +23,29 @@ body {
     display: flex;
     flex: 1;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     align-items: center;
-    background-image: url(pics/background_2.jpg);
+    /*background-image: url(pics/background_2.jpg);
     background-position: center;
-    background-repeat: no-repeat;
-    padding-left: 5%;
+    background-repeat: no-repeat;*/
+    /*padding-left: 5%;
     padding-right: 5%;
-    padding-top: 1%;
+    padding-top: 1%;*/
 }
 
 #joanna {
     display: flex;
     height: 60px;
-    width: 80vw;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    max-width: 1000px;
 }
 
 #topNav {
@@ -103,13 +111,12 @@ footer {
     display: flex;
     align-self: flex-start;
     flex-direction: row;
-    padding-top: 1em;
-    padding-bottom: 0.5em;
+    padding: 1.5em;
 }
 
 #linkedin,
 #github {
-    width: 3em;
+    width: 3.2em;
 }
 
 #github {
@@ -135,19 +142,18 @@ header h2 {
 
 main {
     display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
 }
 
-#profilepic {
-    display: flex;
-    flex: 1;
+#profilepic img {
+    width: 30vw;
     margin: 3em;
     margin-left: 0;
-    background-image: url(pics/profilepic.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
 }
 
-#pres {
+.section {
     color: ghostwhite;
     background-color: rgba(0, 0, 0, 0.5);
     flex-direction: column;
@@ -161,6 +167,11 @@ main {
     justify-content: center;
     align-items: center;
     margin: 3em;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
 }
 
 #email {
@@ -332,14 +343,12 @@ main {
         visibility: hidden;
         display: none;
     }
-    #pres {
+    .section {
         margin: 0;
         margin-top: 1em;
     }
     #social {
-        padding-top: 0;
-        padding-bottom: 0;
-        padding: 0.5em;
+        padding: 1em;
     }
 }
 
