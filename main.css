@@ -22,19 +22,22 @@ body {
     display: flex;
     flex: 1;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
     margin: 0 auto;
     align-items: center;
     background-image: url(pics/background_2.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
 }
 
 #joanna {
     display: flex;
-    height: 100px;
+    height: 60px;
+    width: 80vw;
 }
 
 #topNav {
