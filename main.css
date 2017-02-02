@@ -172,7 +172,7 @@ main {
     border-radius: 100%;
     margin: 1em;
     /*margin-left: 0;*/
-    border: 2px solid #7CE6E4;
+    border: 10px solid #7CE6E4;
     /*transform: rotate(-25deg);*/
 }
 
@@ -245,14 +245,21 @@ main {
     width: 95vw;
     max-width: 900px;
     padding: 1em;
-    border: 2px solid #7CE6E4;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     margin-bottom: 20px;
     font-size: 1em;
     justify-content: center;
     align-items: center;
     margin: 1em;
     z-index: 15;
+}
+
+.section1 {
+    border: 10px solid #F7F0F0;
+}
+
+.section2 {
+    border: 10px solid #7CE6E4;
 }
 
 .background {
