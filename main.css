@@ -1,362 +1,386 @@
-@charset "UTF-8";
-html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    width: 100%;
-    font-family: 'Josefin Slab', serif;
-    /*background-color: #111;*/
-    background: white;
-    font-size: 14px;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-#wrapper {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    align-items: center;
-    /*background-image: url(pics/background_2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;*/
-    /*padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 1%;*/
-}
-
-#joanna {
-    display: flex;
-    height: 60px;
-    width: 80%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-header {
-    width: 100%;
-    max-width: 1000px;
-}
-
-#topNav {
-    display: flex;
-    background-color: rgba(1, 83, 85, 0.3);
-    border-radius: 5px;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-#globalnav {
-    display: flex;
-    list-style: none;
-}
-
-.flexNav {
-    display: flex;
-    margin: 1em;
-}
-
-#myProjects {
-    padding-left: 1em;
-    padding-right: 1em;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
-#globalnav a {
-    text-decoration: none;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-#globalnav a:link,
-#globalnav a:visited {
-    color: black;
-}
-
-#globalnav a:active,
-#globalnav a:hover {
-    color: ghostwhite;
-}
-
-footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: #111;
-    color: white;
-    width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1.5em;
-    margin: 0 auto;
-    clear: both;
-    background-position: bottom;
-}
-
-
-/* clear both för att footer skall hamna under nav/main */
-
-#social {
-    display: flex;
-    align-self: flex-start;
-    flex-direction: row;
-    padding: 1.5em;
-}
-
-#linkedin,
-#github {
-    width: 3.2em;
-}
-
-#github {
-    margin-left: 0.5em;
-}
-
-header h1 {
-    font-size: 3.2em;
-    text-align: center;
-    color: black;
-    margin-bottom: 0;
-    margin-top: 0;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-header h2 {
-    font-size: 1.2em;
-    text-align: center;
-    color: darkslategray;
-    margin-bottom: 25px;
-    font-family: 'Source Code Pro', monospace;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
-}
-
-#profilepic img {
-    width: 30vw;
-    margin: 3em;
-    margin-left: 0;
-}
-
-.section {
-    color: ghostwhite;
-    background-color: rgba(0, 0, 0, 0.5);
-    flex-direction: column;
-    display: flex;
-    flex: 3;
-    padding: 1%;
-    border: 2px solid #015355;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-size: 1em;
-    justify-content: center;
-    align-items: center;
-    margin: 3em;
-}
-
-.about {
-    display: flex;
-    flex-direction: row;
-}
-
-#email {
-    text-decoration: none;
-    color: #FFF;
-}
-
-
-/* make keyframes that tell the start state and the end state of our object */
-
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.fade-in {
-    opacity: 0;
-    /* make things invisible upon start */
-    -webkit-animation: fadeIn ease-in 1;
-    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    -moz-animation: fadeIn ease-in 1;
-    animation: fadeIn ease-in 1;
-    -webkit-animation-fill-mode: forwards;
-    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    animation-duration: 1s;
-}
-
-.fade-in.one {
-    -webkit-animation-delay: 0.7s;
-    -moz-animation-delay: 0.7s;
-    animation-delay: 0.7s;
-}
-
-
-/*inställningar för slidebar för projekt*/
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover,
-.offcanvas a:focus {
-    font-size: 1.5em;
-    color: rgba(1, 135, 154, 0.9);
-}
-
-#close:hover,
-#close2:hover {
-    font-size: 3em;
-    color: mediumvioletred;
-}
-
-.sidenav .closebtn,
-.sideForm .closebtn2 {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 3em;
-    margin-left: 50px;
-}
-
-#slideNav {
-    transition: margin-left .3s;
-}
-
-
-/*inställningar för slidebar för contactform*/
-
-.sideForm {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sideForm a,
-.sideForm label {
-    padding: 2px 2px 2px 10px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    display: block;
-    transition: 0.4s;
-    text-align: left;
-}
-
-.sideForm a:hover,
-.offcanvas a:focus {
-    font-size: 1.5em;
-    color: rgba(1, 135, 154, 0.9);
-}
-
-
-/*#close2:hover {
-    font-size: 3em;
-    color: mediumvioletred;
-}*/
-
-
-/*.sideForm .closebtn2 {
-    position: absolute;
-    top: 0;
-    left: 15px;
-    font-size: 3em;
-}*/
-
-#slideForm {
-    transition: margin-right .3s;
-}
-
-
-/*inställningar mediaQueries*/
-
-@media screen and (max-width: 600px) {
-    #profilepic {
-        visibility: hidden;
-        display: none;
-    }
-    .section {
+    @charset "UTF-8";
+    html {
+        height: 100%;
         margin: 0;
-        margin-top: 1em;
+        padding: 0;
     }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 100%;
+        width: 100%;
+        font-family: 'Josefin Slab', serif;
+        background-color: #F7F0F0;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #wrapper {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        margin: 0 auto;
+        table-layout: fixed;
+        overflow-x: hidden;
+        position: relative;
+        /*background-color: #111;*/
+    }
+    
+    #joanna {
+        display: flex;
+        height: 200px;
+        width: 90vw;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-top: -2.5em;
+        z-index: 9;
+    }
+    
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 70%;
+        max-width: 1000px;
+        margin: 0 auto;
+        z-index: 13;
+        margin-bottom: 3em;
+    }
+    
+    .nav {
+        display: flex;
+        margin-top: 0;
+        width: 100vw;
+        z-index: 14;
+        flex-direction: row;
+        justify-content: space-around;
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+        /*position: fixed;
+        right: 0;
+        left: 0;*/
+    }
+    
+    #globalnav {
+        display: flex;
+        list-style: none;
+    }
+    
+    .flexNav {
+        display: flex;
+        margin: 1em;
+    }
+    
+    #myProjects {
+        padding-left: 1em;
+        padding-right: 1em;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+    
+    #globalnav a {
+        text-decoration: none;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    
+    #globalnav a:link,
+    #globalnav a:visited {
+        color: black;
+    }
+    
+    #globalnav a:active,
+    #globalnav a:hover {
+        color: #7CE6E4;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: space-around;
+        background: #E40066;
+        color: white;
+        width: 100%;
+        padding-top: 1em;
+        padding-bottom: 1.5em;
+        margin: 0 auto;
+        /*clear: both;*/
+        /*background-position: bottom;*/
+        align-self: flex-end;
+        z-index: 14;
+    }
+    /* clear both för att footer skall hamna under nav/main */
+    
     #social {
+        display: flex;
+        /*align-self: flex-start;*/
+        flex-direction: row;
+        margin: 1em 1em 0;
+        z-index: 11;
+    }
+    
+    #social a {
+        z-index: 12;
+    }
+    
+    #linkedin,
+    #github {
+        width: 3.2em;
+    }
+    
+    #github {
+        margin-left: 0.5em;
+    }
+    
+    header h1 {
+        font-size: 3.2em;
+        text-align: center;
+        color: black;
+        margin-bottom: 0;
+        margin-top: 0;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    header h2 {
+        font-size: 1.2em;
+        text-align: center;
+        color: darkslategray;
+        margin-bottom: 25px;
+        font-family: 'Source Code Pro', monospace;
+        z-index: 7;
+    }
+    
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #profilepic img {
+        width: 25em;
+        height: 25em;
+        border-radius: 100%;
+        margin: 1em;
+        /*margin-left: 0;*/
+        border: 2px solid #7CE6E4;
+        /*transform: rotate(-25deg);*/
+    }
+    
+    .aboutSec {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        max-width: 960px;
+        /*background: #7CE6E4;*/
+        z-index: 8;
+        margin-top: 3em;
+    }
+    
+    .contactSec {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /*background-color: rgba(0, 0, 0, 0.5);*/
+        /*z-index: 13;*/
+        width: 100%;
+        max-width: 1000px;
+        color: black;
+        padding: 3em 0 3em;
+    }
+    
+    .hero-contact {
+        z-index: 10;
+    }
+    
+    .details {
+        z-index: 9;
+    }
+    
+    #triangle-bottomleft {
+        width: 0;
+        height: 0;
+        border-bottom: 62.5em solid #7CE6E4;
+        border-right: 62.5em solid transparent;
+        z-index: 2;
+    }
+    
+    .contactSec label {
+        padding: 2px 2px 2px 10px;
+        text-decoration: none;
+        font-size: 1.2em;
+        color: black;
+        display: block;
+        transition: 0.4s;
+        text-align: left;
+    }
+    
+    .email-2 {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .details a:hover {
+        color: #7CE6E4;
+    }
+    
+    .section2,
+    .section1 {
+        color: ghostwhite;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        width: 95vw;
+        max-width: 900px;
         padding: 1em;
+        border: 2px solid #7CE6E4;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 1em;
+        justify-content: center;
+        align-items: center;
+        margin: 1em;
+        z-index: 15;
     }
-}
-
-@media screen and (max-height: 450px) {
+    
+    .background {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -25em;
+        width: 200em;
+        height: 70em;
+        background: -webkit-linear-gradient(left, #E40066, #F7F0F0);
+        background: -o-linear-gradient(right, #E40066, #F7F0F0);
+        background: -moz-linear-gradient(right, #E40066, #F7F0F0);
+        background: linear-gradient(to right, #E40066, #F7F0F0);
+        transform: rotate(45deg);
+    }
+    
+    .pres {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95vw;
+        max-width: 1000px;
+        /*background: white;*/
+        z-index: 10;
+    }
+    
+    .text {
+        transform: rotate(-25deg);
+    }
+    /* Standard syntax */
+    
+    .email {
+        text-decoration: none;
+        color: #FFF;
+    }
+    
+    .email:hover {
+        color: #7CE6E4;
+    }
+    /*inställningar för slidebar för projekt*/
+    
     .sidenav {
-        padding-top: 15px;
+        display: flex;
+        align-items: center;
+        /*justify-content: center;*/
+        flex-direction: column;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 10em;
+        z-index: 99;
     }
+    
     .sidenav a {
-        font-size: 18px;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 1.2em;
+        color: white;
+        display: block;
+        transition: 0.3s
     }
-}
+    
+    .sidenav a:hover,
+    .offcanvas a:focus {
+        font-size: 1.5em;
+        /*color: rgba(1, 135, 154, 0.9);*/
+        color: #7CE6E4;
+    }
+    
+    #close:hover,
+    #close2:hover {
+        font-size: 3em;
+        /*color: mediumvioletred;*/
+        color: #7CE6E4;
+    }
+    
+    .sidenav .closebtn,
+    .sideForm .closebtn2 {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 3em;
+        margin-left: 50px;
+    }
+    
+    #slideNav {
+        transition: margin-left .3s;
+    }
+    /*inställningar för slidebar för contactform*/
+    
+    #contactForm {
+        margin-top: 3em;
+        margin-bottom: -60em;
+        z-index: 10;
+    }
+    
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+    
+    @media screen and (min-width: 700px) {
+        #social {
+            align-self: flex-start;
+        }
+        header {
+            width: 100vw;
+        }
+    }
+    
+    @media screen and (min-width: 850px) {
+        .aboutSec {
+            flex-direction: row;
+        }
+        .section2 {
+            margin-left: 0;
+        }
+    }
