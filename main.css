@@ -170,30 +170,39 @@ main {
 #profilepic {
     width: 25em;
     height: 25em;
-    border-radius: 100%;
+    /*border-radius: 100%;*/
     margin: 1em;
     /*margin-left: 0;*/
     border: 10px solid #49fee3;
-    /*transform: rotate(-25deg);*/
-    /*test*/
-    /*background: url('pics/profilepic.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;*/
     overflow: hidden;
     position: relative;
+    /*padding: 16px;*/
+    border-radius: 100%;
+    /*display: inline-block;*/
+    /*background: #49fee3;*/
+    /*background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #fffac4);
+    background: -o-linear-gradient(right, rgba(255, 255, 255, 0), #fffac4);
+    background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), #fffac4);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fffac4);*/
+    /*transform: rotate(-45deg);*/
 }
 
 .img {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     margin: 0 auto;
     height: 100%;
     width: 100%;
+    /*width: 25em;
+    height: 25em;*/
+    border-radius: 100%;
     background: url('pics/profilepic.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    /*transform: rotate(45deg);*/
 }
 
 
@@ -307,6 +316,7 @@ main {
     left: -25em;
     width: 200em;
     height: 70em;
+    background: #fe4864;
     background: -webkit-linear-gradient(left, #fe4864, #fffac4);
     background: -o-linear-gradient(right, #fe4864, #fffac4);
     background: -moz-linear-gradient(right, #fe4864, #fffac4);
