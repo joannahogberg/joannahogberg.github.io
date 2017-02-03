@@ -11,7 +11,8 @@ body {
     min-height: 100%;
     width: 100%;
     font-family: 'Josefin Slab', serif;
-    background-color: #F7F0F0;
+    /*background-color: #F7F0F0;*/
+    background: #fffac4;
     font-size: 16px;
     padding: 0;
     margin: 0;
@@ -97,13 +98,13 @@ header {
 
 #globalnav a:active,
 #globalnav a:hover {
-    color: #7CE6E4;
+    color: #49fee3;
 }
 
 footer {
     display: flex;
     justify-content: space-around;
-    background: #E40066;
+    background: #fe4864;
     color: white;
     width: 100%;
     padding-top: 1em;
@@ -166,15 +167,43 @@ main {
     margin: 0 auto;
 }
 
-#profilepic img {
+#profilepic {
     width: 25em;
     height: 25em;
     border-radius: 100%;
     margin: 1em;
     /*margin-left: 0;*/
-    border: 10px solid #7CE6E4;
+    border: 10px solid #49fee3;
     /*transform: rotate(-25deg);*/
+    /*test*/
+    /*background: url('pics/profilepic.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;*/
+    overflow: hidden;
+    position: relative;
 }
+
+.img {
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    background: url('pics/profilepic.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+/*#profilepic {
+    -webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from(#49fee3), to(rgba(254, 72, 100, 0.5))) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient(right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;
+    -moz-border-image: -moz-linear-gradient(right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;
+    -o-border-image: -o-linear-gradient(right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;
+    border-image: linear-gradient(to right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;
+}*/
 
 .aboutSec {
     display: flex;
@@ -182,7 +211,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    max-width: 960px;
+    max-width: 1000px;
     /*background: #7CE6E4;*/
     z-index: 8;
     margin-top: 3em;
@@ -212,7 +241,7 @@ main {
 #triangle-bottomleft {
     width: 0;
     height: 0;
-    border-bottom: 62.5em solid #7CE6E4;
+    border-bottom: 62.5em solid #49fee3;
     border-right: 62.5em solid transparent;
     z-index: 2;
 }
@@ -233,7 +262,7 @@ main {
 }
 
 .details a:hover {
-    color: #7CE6E4;
+    color: #49fee3;
 }
 
 .section2,
@@ -255,11 +284,17 @@ main {
 }
 
 .section1 {
-    border: 10px solid #F7F0F0;
+    border: 10px solid #fffac4;
 }
 
 .section2 {
-    border: 10px solid #7CE6E4;
+    border: 10px solid #49fee3;
+    /*border: 10px solid;
+    -webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from(#49fee3), to(rgba(254, 72, 100, 0.5))) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient(right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;
+    -moz-border-image: -moz-linear-gradient(right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;
+    -o-border-image: -o-linear-gradient(right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;
+    border-image: linear-gradient(to right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;*/
 }
 
 .background {
@@ -272,10 +307,10 @@ main {
     left: -25em;
     width: 200em;
     height: 70em;
-    background: -webkit-linear-gradient(left, #E40066, #F7F0F0);
-    background: -o-linear-gradient(right, #E40066, #F7F0F0);
-    background: -moz-linear-gradient(right, #E40066, #F7F0F0);
-    background: linear-gradient(to right, #E40066, #F7F0F0);
+    background: -webkit-linear-gradient(left, #fe4864, #fffac4);
+    background: -o-linear-gradient(right, #fe4864, #fffac4);
+    background: -moz-linear-gradient(right, #fe4864, #fffac4);
+    background: linear-gradient(to right, #fe4864, #fffac4);
     transform: rotate(45deg);
 }
 
@@ -303,7 +338,7 @@ main {
 }
 
 .email:hover {
-    color: #7CE6E4;
+    color: #49fee3;
 }
 
 
@@ -340,14 +375,14 @@ main {
 .offcanvas a:focus {
     font-size: 1.5em;
     /*color: rgba(1, 135, 154, 0.9);*/
-    color: #7CE6E4;
+    color: #49fee3;
 }
 
 #close:hover,
 #close2:hover {
     font-size: 3em;
     /*color: mediumvioletred;*/
-    color: #7CE6E4;
+    color: #49fee3;
 }
 
 .sidenav .closebtn,
@@ -372,7 +407,8 @@ main {
     z-index: 10;
 }
 
-.cls-1 {
+
+/*.cls-1 {
     font-size: 36px;
     letter-spacing: -0.16em;
 }
@@ -447,7 +483,7 @@ main {
 .cls-12 {
     font-size: 20px;
     letter-spacing: -0.54em;
-}
+}*/
 
 @media screen and (max-height: 450px) {
     .sidenav {
@@ -470,8 +506,13 @@ main {
 @media screen and (min-width: 850px) {
     .aboutSec {
         flex-direction: row;
+        width: 100vw;
     }
     .section2 {
+        /*margin-right: 0;*/
+        width: 50%;
+    }
+    #profilepic {
         margin-left: 0;
     }
 }
