@@ -23,14 +23,23 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+button {
     font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    font-weight: 400;
 }
 
 span,
 p {
     line-height: 1.5;
     letter-spacing: 0.05em;
+    color: black;
+}
+
+a,
+button {
+    cursor: pointer;
 }
 
 #wrapper {
@@ -278,9 +287,9 @@ main {
     margin: 0 auto;
 }
 
-#profilepic {
-    width: 25em;
-    height: 25em;
+.profilepic {
+    width: 20em;
+    height: 20em;
     /*border-radius: 100%;*/
     margin: 1em;
     /*margin-left: 0;*/
@@ -337,6 +346,22 @@ main {
     margin-top: 3em;
 }
 
+.projectBtn {
+    /*width: 7em;
+    height: 3.5em;*/
+    padding: 1.5em;
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    /*font-family: 'Josefin Sans', sans-serif;*/
+    border-radius: 5px;
+}
+
+.projectBtn:hover {
+    color: #49fee3;
+    border: 1px solid #49fee3;
+}
+
 .contactSec {
     display: flex;
     flex-direction: column;
@@ -366,6 +391,17 @@ main {
     z-index: 2;
 }
 
+#triangle-topleft {
+    display: flex;
+    align-self: flex-start;
+    width: 0;
+    height: 0;
+    border-top: 31.25em solid #fe4864;
+    border-right: 43.75em solid transparent;
+    z-index: 3;
+    margin: 2em 0 -33em;
+}
+
 .contactSec label {
     padding: 2px 2px 2px 10px;
     text-decoration: none;
@@ -386,9 +422,11 @@ main {
 }
 
 .section2,
-.section1 {
+.section1,
+.section3 {
     color: ghostwhite;
-    background-color: rgba(56, 15, 22, 0.6);
+    /*background-color: rgba(56, 15, 22, 0.6);*/
+    color: black;
     display: flex;
     flex-direction: column;
     width: 85vw;
@@ -399,7 +437,7 @@ main {
     align-items: center;
     margin: 1em 1em 0;
     z-index: 15;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 }
 
 .section1 {
@@ -414,6 +452,15 @@ main {
     -moz-border-image: -moz-linear-gradient(right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;
     -o-border-image: -o-linear-gradient(right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;
     border-image: linear-gradient(to right, #49fee3, rgba(254, 72, 100, 0.5)) 1 100%;*/
+}
+
+.section3 {
+    border-right: 10px solid #49fee3;
+    border-top: 10px solid #49fee3;
+    margin-bottom: -3.1em;
+    max-width: 450px;
+    background: transparent;
+    color: black;
 }
 
 .background {
@@ -457,7 +504,7 @@ main {
 .sidenav {
     display: flex;
     align-items: center;
-    /*justify-content: center;*/
+    justify-content: flex-start;
     flex-direction: column;
     height: 100%;
     width: 0;
@@ -466,48 +513,66 @@ main {
     top: 0;
     left: 0;
     background: #fe4864;
-    background: -webkit-linear-gradient(left, #fe4864, #fffac4);
-    background: -o-linear-gradient(right, #fe4864, #fffac4);
-    background: -moz-linear-gradient(right, #fe4864, #fffac4);
-    background: linear-gradient(to right, #fe4864, #fffac4);
+    /*background: -webkit-linear-gradient(top, #fe4864, #fffac4);
+    background: -o-linear-gradient(bottom, #fe4864, #fffac4);
+    background: -moz-linear-gradient(bottom, #fe4864, #fffac4);
+    background: linear-gradient(to bottom, #fe4864, #fffac4);*/
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 10em;
+    padding-top: 5em;
     z-index: 1000;
+    /*transform: rotate(-45deg);*/
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*transform: rotate(45deg);*/
+    z-index: 103;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 1em 0 0.5em;
     text-decoration: none;
     font-size: 1.2em;
     color: white;
-    display: block;
-    transition: 0.3s
+    /*display: block;*/
+    transition: 0.3s;
+    display: flex;
+}
+
+.sidenav span {
+    font-size: 1.5em;
+    color: black;
+    /*display: block;*/
+    border-bottom: 1px solid #49fee3;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
 }
 
 .sidenav a:hover,
 .offcanvas a:focus {
     font-size: 1.5em;
-    /*color: rgba(1, 135, 154, 0.9);*/
     color: #49fee3;
 }
 
 #close:hover {
-    font-size: 3em;
-    /*color: mediumvioletred;*/
+    font-size: 4em;
     color: #49fee3;
 }
 
 .sidenav .closebtn {
-    position: absolute;
+    /*position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 3em;
-    margin-left: 50px;
+    right: 25px;*/
+    font-size: 4em;
+    display: flex;
+    /*margin-top: 2em;*/
 }
 
 #slideNav {
-    transition: margin-left .3s;
+    transition: margin-right .3s;
 }
 
 
@@ -516,23 +581,37 @@ main {
 #contactForm {
     display: flex;
     flex-direction: column;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    width: 85vw;
+    max-width: 450px;
     margin-top: 3em;
-    margin-bottom: -61em;
+    margin-bottom: -62em;
     z-index: 10;
+    border-right: 10px solid #49fee3;
+    border-top: transparent;
+    padding: 1em;
 }
 
 .text-field {
     display: flex;
-    width: 22em;
+    width: 80%;
+    max-width: 300px;
     padding: 0.5em;
+    margin: 0.5em 0 0.5em;
 }
 
 .message-field {
     display: flex;
-    width: 23em;
-    height: 4em;
+    padding: 0.5em;
+    width: 90%;
+    max-width: 450px;
+    height: 8em;
+    margin: 0.5em 0 1em;
 }
 
+
+/*
 .sendBtn {
     display: none;
 }
@@ -547,8 +626,30 @@ main {
     background: #49fee3;
     border-radius: 5px;
     border: 2px solid black;
-    /*position: relative;*/
+    
     margin-top: 1em;
+}*/
+
+.formBtn {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*width: 10em;*/
+    font-size: 1em;
+    font-weight: 700;
+    padding: 1em 2em 1em;
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    /*font-family: 'Josefin Sans', sans-serif;*/
+    border-radius: 5px;
+}
+
+.formBtn:hover {
+    border: 2px solid white;
+    color: white;
 }
 
 .sendLabel:hover {
@@ -582,13 +683,14 @@ main {
     background: #fe4864;
     border: 10px solid #49fee3;
     color: black;
-    margin: 6em 0 2em;
+    margin: 7em 0 3em;
 }
 
 .skills {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .tools-icon {
@@ -644,33 +746,33 @@ main {
 }
 
 .trans1 {
-    top: 0.2em;
+    top: -0.4em;
     left: -9em;
 }
 
 .trans2 {
     top: 5.5em;
-    left: 1.2em;
+    left: 1.3em;
 }
 
 .trans3 {
-    top: 0.2em;
+    top: -0.4em;
     right: -9em;
 }
 
 .trans4 {
     top: -6.5em;
-    left: 1.5em;
+    left: 1.3em;
 }
 
 .trans5 {
     top: -6.5em;
-    right: 1.5em;
+    right: 1.3em;
 }
 
 .trans6 {
     top: 5.5em;
-    right: 1.2em;
+    right: 1.3em;
 }
 
 @media screen and (max-height: 450px) {
@@ -689,6 +791,13 @@ main {
     header {
         width: 100vw;
     }
+    /*.text-field {
+        width: 50vw;
+    }*/
+    .message-field {
+        /*width: 50vw;*/
+        height: 8em;
+    }
 }
 
 @media screen and (min-width: 850px) {
@@ -702,19 +811,29 @@ main {
     .section2 {
         margin-right: 0;
         width: 45%;
+        /*margin-bottom: -1.5em;*/
     }
-    #profilepic {
-        margin-left: 0;
-        margin-bottom: -16em;
-        width: 28em;
-        height: 28em;
+    .profilepic {
+        /*margin-left: 0;*/
+        /*margin-bottom: -4em;*/
+        width: 24em;
+        height: 24em;
     }
-    .text-field {
-        width: 35em;
+    /*.text-field {
+        width: 30em;
         padding: 0.5em;
     }
     .message-field {
-        width: 36em;
+        width: 100%;
         height: 8em;
+    }*/
+}
+
+@media screen and (min-width: 900px) {
+    .profilepic {
+        /*margin-left: 0;*/
+        /*margin-bottom: -4em;*/
+        width: 26em;
+        height: 26em;
     }
 }

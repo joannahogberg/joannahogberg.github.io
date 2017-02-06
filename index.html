@@ -15,18 +15,32 @@
 
         <div id="slideNav">
             <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" id="close" onclick="closeNav()">&times;</a>
-                <a target="blank" href="https://joannahogberg.github.io/plantify/">PLANTIFY</a>
-                <a target="blank" href="https://joannahogberg.github.io/Pattis-ToDo-app/" class="project" id="0">MY ToDo LIST</a>
-                <a target="blank" href="https://joannahogberg.github.io/Pattis-Food-Generator/">FOOD GENERATOR</a>
-                <a target="blank" href="https://joannahogberg.github.io/Pattis-Memory-Game/">MEMORY GAME</a>
+
+                <div class="projects">
+
+
+                    <!--<a href="javascript:void(0)" class="closebtn" id="close" onclick="closeNav()">&times;</a>-->
+                    <span>HTML & CSS</span>
+                    <a target="blank" href="https://joannahogberg.github.io/plantify/">PLANTIFY</a>
+                    <span>JavaScript</span>
+                    <a target="blank" href="https://joannahogberg.github.io/Pattis-ToDo-app/" class="project" id="0">MY ToDo LIST</a>
+                    <a target="blank" href="https://joannahogberg.github.io/Pattis-Food-Generator/">FOOD GENERATOR</a>
+                    <a target="blank" href="https://joannahogberg.github.io/Pattis-Memory-Game/">MEMORY GAME</a>
+
+
+
+                    <a href="javascript:void(0)" class="closebtn" id="close" onclick="closeNav()">&times;</a>
+
+                </div>
+
+
             </div>
 
             <header>
-                <div id="social">
+                <figure id="social">
                     <a target="blank" href="https://www.linkedin.com/in/joanna-högberg-b19276106?trk=nav_responsive_tab_profile"><img src="pics/linkedin.png" alt="linkedin_logo" id="linkedin"></a>
                     <a target="blank" href="https://github.com/joannahogberg"><img src="pics/github.png" alt="linkedin_logo" id="github"></a>
-                </div>
+                </figure>
 
 
                 <svg id="joanna" data-name="joanna" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.04 38.05"><defs>
@@ -133,7 +147,7 @@
 
             <main>
                 <div class="pres">
-                    <section class="section1 ">
+                    <section class="section1">
                         <h1>To make the story short:</h1>
                         <p>I'm a front-end developer student with a burning passion for the web and how we can continue making it better every day. I enjoy turning complex problems into simple, beautiful and intuitive interface designs with a focus on writing
                             clean and efficient code.</p>
@@ -141,22 +155,30 @@
                         <p>My future goal is to be involved in projects that I can be proud of, join an amazing team and advance my development skills. If you're interested in helping me make this happen, <a href="#contact" class="email" title="Go to contact">let's get in touch.</a></p>
                     </section>
                 </div>
+                <div id="triangle-topleft">
+
+                </div>
+
 
                 <div class="background">
                 </div>
 
+
+
                 <div class="aboutSec">
 
-                    <div id="profilepic">
+                    <div class="profilepic">
                         <figure class="img">
-
                         </figure>
-                        <!--<img src="pics/profilepic.jpg" alt="profilepicture">-->
+
                     </div>
                     <section id="about" class="section2 ">
                         <h2>A little bit about me...</h2>
                         <p>My name is Joanna and you're most sure to find me at Kungsholmen in Stockholm. I have a background within E-Commerce and I guess that's where my interest in responsive design was brought.</p>
                         <p>I started my webdeveloper journey when the cherry blossoms started blooming in 2016. I totally fell in love with HTML, CSS and JavaScript and am now a Front-End Developer student eager to learn new things every day. </p>
+                        <button type="" class="projectBtn" onclick="openNav()">SEE RECENT PROJECTS</button>
+                        <!--<div class="">
+                            <label class="">SEE PROJECTS</label></div>-->
                         <p>When I'm not all caught up in my code I love being out in the wild with my dog, Lucas, or on a plane heading to one of the worlds great cities.</p>
 
                     </section>
@@ -166,17 +188,17 @@
 
                 <div class="skillContainer" onclick="">
                     <figure class="skills">
-                        <!--<h2>SKILLS</h2>-->
+
                         <img class="tools-icon" src="pics/tools.png" alt="My tools">
                     </figure>
 
                     <figure class="trans1">
-                        <!--<h3>HTML5</h3>-->
+
                         <img src="pics/js.png" alt="html5 logo" class="tools-icon">
 
                     </figure>
                     <figure class="trans2">
-                        <!--<h3>CSS3 > SASS</h3>-->
+
                         <img src="pics/heart.png" alt="html5 logo" class="tools-icon">
 
 
@@ -186,11 +208,11 @@
 
                     </figure>
                     <figure class="trans4">
-                        <img src="pics/html5.png" alt="html5 logo" class="tools-icon">
+                        <img src="pics/css.png" alt="html5 logo" class="tools-icon">
 
                     </figure>
                     <figure class="trans5">
-                        <img src="pics/css.png" alt="html5 logo" class="tools-icon">
+                        <img src="pics/html5.png" alt="html5 logo" class="tools-icon">
 
                     </figure>
                     <figure class="trans6">
@@ -202,21 +224,21 @@
 
 
                 <div id="contact" class="contactSec">
-                    <section class="section2">
+                    <section class="section3">
                         <h2 class="hero-contact">Hope to hear from you soon!</h2>
                         <p>I'm currently available and hungry to pratice my skills in rewarding projects.<br> If you're curious to know more, feel free to drop me a line.</p>
 
 
                     </section>
                     <form id="contactForm" method="post" action="http://www.olzzon.com/cgi-bin/p.cgi?epost=joanna.hogberg-CCC-gmail.com&id=1 ">
-                        <label>Name:<input type="text" name="name" class="text-field" required></label>
-                        <label>Email:<input type="text" name="email"  class="text-field" required></label>
+                        <label>Name:<input type="text" name="name" class="text-field" placeholder="Name*" required></label>
+                        <label>Email:<input type="text" name="email"  class="text-field" placeholder="Email*" required></label>
                         <label>Message:<textarea name="message" cols="" rows="" class="message-field"></textarea></label>
-                        <!--<div class="sendLabel">
-                            <label class="send">SEND</label> <input type="submit" value="" class="sendBtn"></div>-->
-                        <label class="sendLabel"> <span class="send">SEND</span> <input type="submit" value="" class="sendBtn"></label>
-
+                        <button type="" class="formBtn">SEND</button>
+                        <!--<label class="sendLabel"> <span class="send">SEND</span> <input type="submit" value="" class="sendBtn"></label>-->
+                        <!--<button type="" class="sendBtn">SEND<input type="submit" value="" class="sendBtn"></button>-->
                     </form>
+
                     <div id="triangle-bottomleft">
 
                     </div>
