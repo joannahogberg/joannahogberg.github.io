@@ -140,7 +140,7 @@ footer {
     display: flex;
     /*align-self: flex-start;*/
     flex-direction: row;
-    margin: 1em 1em 0;
+    margin: 1em 0.625em 0;
     z-index: 11;
 }
 
@@ -465,7 +465,11 @@ main {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #fe4864;
+    background: #fe4864;
+    background: -webkit-linear-gradient(left, #fe4864, #fffac4);
+    background: -o-linear-gradient(right, #fe4864, #fffac4);
+    background: -moz-linear-gradient(right, #fe4864, #fffac4);
+    background: linear-gradient(to right, #fe4864, #fffac4);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 10em;
@@ -641,32 +645,32 @@ main {
 
 .trans1 {
     top: 0.2em;
-    left: -6.4em;
+    left: -9em;
 }
 
 .trans2 {
-    top: 6.2em;
-    left: 3.8em;
+    top: 5.5em;
+    left: 1.2em;
 }
 
 .trans3 {
     top: 0.2em;
-    right: -6.4em;
+    right: -9em;
 }
 
 .trans4 {
-    top: -5.5em;
-    left: -3em;
+    top: -6.5em;
+    left: 1.5em;
 }
 
 .trans5 {
-    top: -5.5em;
-    right: -3em;
+    top: -6.5em;
+    right: 1.5em;
 }
 
 .trans6 {
-    top: 6.2em;
-    right: 3.8em;
+    top: 5.5em;
+    right: 1.2em;
 }
 
 @media screen and (max-height: 450px) {
