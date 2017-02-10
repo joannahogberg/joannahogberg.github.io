@@ -27,7 +27,7 @@ $breakpoints: ( 'xxsmall': ( min-width: 360px), 'xsmall': ( min-width: 375px), '
 
 @mixin heading {
     font-family: $heading-font;
-    line-height: 1.5;
+    line-height: 1;
     font-size: 16px;
     font-weight: 400;
     color: black;
@@ -35,32 +35,32 @@ $breakpoints: ( 'xxsmall': ( min-width: 360px), 'xsmall': ( min-width: 375px), '
 
 @mixin head-1 {
     @include heading;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 @mixin head-2 {
     @include heading;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 @mixin head-3 {
     @include heading;
-    font-size: 1.75em;
+    font-size: 1.2em;
 }
 
 @mixin head-4 {
     @include heading;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 @mixin head-5 {
     @include heading;
-    font-size: 1.2em;
+    font-size: 0.75em;
 }
 
 @mixin head-6 {
     @include heading;
-    font-size: 0.6em;
+    font-size: 0.5em;
 }
 
 

@@ -150,55 +150,56 @@ body {
 /*------------------------typography*/
 h1 {
   font-family: "Josefin Sans", sans-serif;
-  line-height: 1.5;
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-  font-size: 2.5em; }
-
-h2 {
-  font-family: "Josefin Sans", sans-serif;
-  line-height: 1.5;
+  line-height: 1;
   font-size: 16px;
   font-weight: 400;
   color: black;
   font-size: 2em; }
 
-h3 {
+h2 {
   font-family: "Josefin Sans", sans-serif;
-  line-height: 1.5;
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-  font-size: 1.75em; }
-
-h4 {
-  font-family: "Josefin Sans", sans-serif;
-  line-height: 1.5;
+  line-height: 1;
   font-size: 16px;
   font-weight: 400;
   color: black;
   font-size: 1.5em; }
 
-h5 {
+h3 {
   font-family: "Josefin Sans", sans-serif;
-  line-height: 1.5;
+  line-height: 1;
   font-size: 16px;
   font-weight: 400;
   color: black;
   font-size: 1.2em; }
 
-h6 {
+h4 {
   font-family: "Josefin Sans", sans-serif;
-  line-height: 1.5;
+  line-height: 1;
   font-size: 16px;
   font-weight: 400;
   color: black;
-  font-size: 0.6em; }
+  font-size: 1em; }
+
+h5 {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  font-size: 0.75em; }
+
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  font-size: 0.5em; }
 
 p {
   font-family: "Josefin Slab", serif;
   line-height: 1.5;
+  font-weight: 400;
   letter-spacing: 0.05em;
   color: black; }
 
@@ -271,14 +272,20 @@ header {
     header {
       width: 100vw; } }
 
-header h2 {
+header h1 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  font-weight: 300;
-  margin: 0.5em 0 0.5em;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  font-size: 1.5em;
+  font-weight: 100;
+  margin: 0.4em 0 0.4em;
   padding: 0.5em;
   z-index: 7; }
 
