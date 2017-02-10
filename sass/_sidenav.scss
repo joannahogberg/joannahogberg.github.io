@@ -1,0 +1,62 @@
+.sidenav {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-direction(column);
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: $red;
+    overflow-x: hidden;
+    // transition: 0.5s;
+    @include transition(0.5s);
+    padding-top: 5em;
+    z-index: 1000;
+}
+
+.projects {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    z-index: 103;
+}
+
+.sidenav a {
+    padding: 1em 0 0.5em;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    @include transition(0.3s);
+    // transition: 0.3s;
+    @include flexbox;
+}
+
+.sidenav span {
+    font-size: 1.5em;
+    color: black;
+    border-bottom: 1px solid $celeste;
+    font-family: 'Josefin Sans', sans-serif;
+    @include flexbox;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    font-size: 1.5em;
+    color: $celeste;
+}
+
+#close:hover {
+    font-size: 4em;
+    color: $celeste;
+}
+
+.sidenav .closebtn {
+    font-size: 4em;
+    @include flexbox;
+}
+
+#slideNav {
+    transition: margin-right .3s;
+}
