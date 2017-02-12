@@ -218,9 +218,6 @@ footer {
     }
 }
 
-// #social a {
-//     z-index: 12;
-// }
 #linkedin,
 #github {
     width: 3.2em;
@@ -238,11 +235,7 @@ footer {
     margin-top: 0;
     width: 100vw;
     z-index: 14;
-    // font-family: 'Josefin Sans', sans-serif;
     text-align: center;
-    /*position: fixed;
-        right: 0;
-        left: 0;*/
 }
 
 .globalnav {
@@ -258,12 +251,11 @@ footer {
 #myProjects {
     padding-left: 1em;
     padding-right: 1em;
-    border-left: 1px solid $celeste;
-    border-right: 1px solid $celeste;
+    border-left: 1.5px solid $celeste;
+    border-right: 1.5px solid $celeste;
 }
 
 .globalnav a {
-    // text-decoration: none;
     font-size: 1.2em;
     cursor: pointer;
 }
@@ -344,14 +336,11 @@ main {
     margin: 0 auto;
     height: 100%;
     width: 100%;
-    /*width: 25em;
-    height: 25em;*/
     @include border-radius (100%);
     background: url('../pics/profilepic.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    /*transform: rotate(45deg);*/
 }
 
 .aboutSec {
@@ -368,7 +357,8 @@ main {
 }
 
 .projectBtn {
-    padding: 1.5em;
+    padding: 1em 1.5em 1em;
+    font-size: 1em;
     @include transparent-backgound($red,
     0);
     border: 1px solid black;
@@ -385,7 +375,6 @@ main {
 }
 
 .email {
-    // text-decoration: none;
     color: $celeste;
 }
 
@@ -401,14 +390,13 @@ main {
     width: 85vw;
     max-width: 948px;
     padding: 1em;
-    // font-size: 1em;
     color: black;
-    margin: 1em 1em 0;
+    margin: 1em 0 1em;
     z-index: 15;
 }
 
 .section1 {
-    border: 10px solid #fffac4;
+    border: 10px solid $yellow;
     @include breakpoint(large) {
         width: 95vw;
     }
@@ -423,26 +411,25 @@ main {
 }
 
 .section3 {
-    border-right: 10px solid $celeste;
-    border-top: 10px solid $celeste;
+    border: 10px solid $celeste;
+    border-bottom: hidden;
     margin-bottom: -3.1em;
     max-width: 450px;
-    background: transparent;
     color: black;
 }
 
 .skillContainer {
     @include flexbox;
-    @include justify-content(space-around);
+    @include justify-content(center);
     position: relative;
     z-index: 16;
     width: 7em;
     height: 7em;
     @include border-radius (100%);
-    background: #fe4864;
-    border: 10px solid #49fee3;
+    background: $red;
+    border: 10px solid $celeste;
     color: black;
-    margin: 7em 0 3em;
+    margin: 7em 0 4em;
 }
 
 .skills {
@@ -452,6 +439,7 @@ main {
 
 .tools-icon {
     height: 3.5em;
+    @include flexbox;
 }
 
 .skillContainer:hover .trans1 {
@@ -488,7 +476,7 @@ main {
     height: 5em;
     width: 5em;
     @include border-radius (100%);
-    background: #fffac4;
+    background: $yellow;
     color: black;
     @include opacity(0);
     position: absolute;
@@ -531,10 +519,10 @@ main {
 .contactSec {
     @include flex-center;
     @include flex-direction(column);
-    width: 100%;
+    width: 100vw;
     max-width: 1000px;
     color: black;
-    padding: 3em 0 3em;
+    margin: 3em 0 0;
 }
 
 #contactForm {
@@ -545,8 +533,8 @@ main {
     margin-top: 3em;
     margin-bottom: -62em;
     z-index: 10;
-    border-right: 10px solid #49fee3;
-    border-top: transparent;
+    border: 10px solid $celeste;
+    border-top: hidden;
     padding: 1em;
 }
 
@@ -589,10 +577,9 @@ main {
     @include align-self(center);
     font-size: 1em;
     font-weight: 700;
-    padding: 1em 1.5em 1em;
+    padding: 0.8em 1.5em 0.8em;
     @include transparent-backgound($celeste,
     0);
-    // background: transparent;
     border: 2px solid black;
     color: black;
     @include border-radius (5px);

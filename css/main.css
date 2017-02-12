@@ -493,10 +493,7 @@ footer {
   margin-top: 0;
   width: 100vw;
   z-index: 14;
-  text-align: center;
-  /*position: fixed;
-      right: 0;
-      left: 0;*/ }
+  text-align: center; }
 
 .globalnav {
   display: -webkit-box;
@@ -526,8 +523,8 @@ footer {
 #myProjects {
   padding-left: 1em;
   padding-right: 1em;
-  border-left: 1px solid #49fee3;
-  border-right: 1px solid #49fee3; }
+  border-left: 1.5px solid #49fee3;
+  border-right: 1.5px solid #49fee3; }
 
 .globalnav a {
   font-size: 1.2em;
@@ -658,8 +655,6 @@ main {
   margin: 0 auto;
   height: 100%;
   width: 100%;
-  /*width: 25em;
-  height: 25em;*/
   -webkit-border-radius: 100%;
   border-radius: 100%;
   background-clip: padding-box;
@@ -667,8 +662,7 @@ main {
   background: url("../pics/profilepic.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
-  /*transform: rotate(45deg);*/ }
+  background-size: 100%; }
 
 .aboutSec {
   display: -webkit-box;
@@ -702,7 +696,8 @@ main {
       width: 100vw; } }
 
 .projectBtn {
-  padding: 1.5em;
+  padding: 1em 1.5em 1em;
+  font-size: 1em;
   background: rgb(254, 72, 100);
   background: rgba(254, 72, 100, 0);
   border: 1px solid black;
@@ -749,7 +744,7 @@ main {
   max-width: 948px;
   padding: 1em;
   color: black;
-  margin: 1em 1em 0;
+  margin: 1em 0 1em;
   z-index: 15; }
 
 .section1 {
@@ -766,11 +761,10 @@ main {
       width: 46%; } }
 
 .section3 {
-  border-right: 10px solid #49fee3;
-  border-top: 10px solid #49fee3;
+  border: 10px solid #49fee3;
+  border-bottom: hidden;
   margin-bottom: -3.1em;
   max-width: 450px;
-  background: transparent;
   color: black; }
 
 .skillContainer {
@@ -779,11 +773,11 @@ main {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: space-around;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
   position: relative;
   z-index: 16;
   width: 7em;
@@ -795,7 +789,7 @@ main {
   background: #fe4864;
   border: 10px solid #49fee3;
   color: black;
-  margin: 7em 0 3em; }
+  margin: 7em 0 4em; }
 
 .skills {
   display: -webkit-box;
@@ -815,7 +809,12 @@ main {
   cursor: pointer; }
 
 .tools-icon {
-  height: 3.5em; }
+  height: 3.5em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
 
 .skillContainer:hover .trans1 {
   opacity: 1;
@@ -922,10 +921,10 @@ main {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   max-width: 1000px;
   color: black;
-  padding: 3em 0 3em; }
+  margin: 3em 0 0; }
 
 #contactForm {
   display: -webkit-box;
@@ -942,8 +941,8 @@ main {
   margin-top: 3em;
   margin-bottom: -62em;
   z-index: 10;
-  border-right: 10px solid #49fee3;
-  border-top: transparent;
+  border: 10px solid #49fee3;
+  border-top: hidden;
   padding: 1em; }
 
 .contactSec label {
@@ -1004,7 +1003,7 @@ main {
   align-self: center;
   font-size: 1em;
   font-weight: 700;
-  padding: 1em 1.5em 1em;
+  padding: 0.8em 1.5em 0.8em;
   background: rgb(73, 254, 227);
   background: rgba(73, 254, 227, 0);
   border: 2px solid black;
