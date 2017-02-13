@@ -319,12 +319,12 @@ main {
     position: relative;
     @include border-radius (100%);
     @include breakpoint(large) {
-        width: 24em;
-        height: 24em;
+        width: 23em;
+        height: 23em;
     }
     @include breakpoint(xlarge) {
-        width: 26em;
-        height: 26em;
+        width: 25em;
+        height: 25em;
     }
 }
 
@@ -352,7 +352,7 @@ main {
     z-index: 8;
     @include breakpoint(large) {
         @include flex-direction(row);
-        width: 100vw;
+        @include justify-content(space-around);
     }
 }
 
@@ -406,7 +406,11 @@ main {
     border: 10px solid $celeste;
     @include breakpoint(large) {
         margin-right: 0;
-        width: 46%;
+        width: 45%;
+    }
+    @include breakpoint(xlarge) {
+        margin-right: 0;
+        width: 50%;
     }
 }
 

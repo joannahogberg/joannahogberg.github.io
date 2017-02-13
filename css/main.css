@@ -640,12 +640,12 @@ main {
   /* stops bg color from leaking outside the border: */ }
   @media (min-width: 850px) {
     .profilepic {
-      width: 24em;
-      height: 24em; } }
+      width: 23em;
+      height: 23em; } }
   @media (min-width: 900px) {
     .profilepic {
-      width: 26em;
-      height: 26em; } }
+      width: 25em;
+      height: 25em; } }
 
 .img {
   position: absolute;
@@ -693,7 +693,11 @@ main {
       -moz-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      width: 100vw; } }
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around; } }
 
 .projectBtn {
   padding: 1em 1.5em 1em;
@@ -758,7 +762,11 @@ main {
   @media (min-width: 850px) {
     .section2 {
       margin-right: 0;
-      width: 46%; } }
+      width: 45%; } }
+  @media (min-width: 900px) {
+    .section2 {
+      margin-right: 0;
+      width: 50%; } }
 
 .section3 {
   border: 10px solid #49fee3;
