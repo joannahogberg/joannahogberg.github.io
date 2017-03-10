@@ -1,780 +1,779 @@
-@import "random";
-@import "mixins";
-@import "sidenav";
-
-/* ---------------------- Preparing styles */
-
-html,
-body,
-div,
-header,
-nav,
-section,
-footer,
-article,
-figure,
-form {
-    margin: 0;
-    padding: 0;
-}
-
-// For browsers without HTML5 support
-html,
-nav,
-main,
-section,
-footer {
-    display: block;
-}
-
-// To prevent Safari from scale text in iphone
-html {
-    -webkit-text-size-adjust: 100%;
-}
-
-
-/* height to 100%, margin to 0% to create sticky footer */
-
-html {
-    height: 100%;
-}
-
-body {
-    @include flexbox;
-    @include flex-direction(column);
-    @include justify-content(center);
-    min-height: 100%;
-    width: 100%;
-    font-size: 16px;
-    background: $yellow;
-    font-family: $text-font;
-}
-
-
-/*------------------------typography*/
-
-h1 {
-    @include head-1;
-}
-
-h2 {
-    @include head-2;
-}
-
-h3 {
-    @include head-3;
-}
-
-h4 {
-    @include head-4;
-}
-
-h5 {
-    @include head-5;
-}
-
-h6 {
-    @include head-6;
-}
-
-p {
-    font-family: $text-font;
-    line-height: 1.5;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    color: black;
-}
-
-a,
-button {
-    font-family: $heading-font;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.wrapper {
-    @include flexbox;
-    /* flex-grow 1 to create sticky footer for flexbox*/
-    @include flex-grow(1);
-    @include flex-direction(column);
-    @include align-items(center);
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    margin: 0 auto;
-    table-layout: fixed;
-    overflow: hidden;
-    position: relative;
-}
-
-// Styles for logo
-#joanna {
-    @include flexbox;
-    height: 8em;
-    width: 90vw;
-    max-width: 1000px;
-    margin: 0 auto;
-    margin: 0.5em 0.5em 1em;
-    @include breakpoint(medium) {
-        margin-top: -2.5em;
+    @import "random";
+    @import "mixins";
+    @import "sidenav";
+    /* ---------------------- Preparing styles */
+    
+    html,
+    body,
+    div,
+    header,
+    nav,
+    section,
+    footer,
+    article,
+    figure,
+    form {
+        margin: 0;
+        padding: 0;
     }
-    // z-index: 9;
-}
-
-#logoLink {
-    z-index: 9;
-}
-
-header {
-    @include flexbox;
-    @include flex-direction(column);
-    @include align-items(center);
-    width: 70%;
-    max-width: 1000px;
-    margin: 0 auto;
-    z-index: 13;
-    margin-bottom: 3em;
-    @include breakpoint(medium) {
+    
+    // For browsers without HTML5 support
+    html,
+    nav,
+    main,
+    section,
+    footer {
+        display: block;
+    }
+    
+    // To prevent Safari from scale text in iphone
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+    /* height to 100%, margin to 0% to create sticky footer */
+    
+    html {
+        height: 100%;
+    }
+    
+    body {
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(center);
+        min-height: 100%;
+        width: 100%;
+        font-size: 16px;
+        background: $yellow;
+        font-family: $text-font;
+    }
+    /*------------------------typography*/
+    
+    h1 {
+        @include head-1;
+    }
+    
+    h2 {
+        @include head-2;
+    }
+    
+    h3 {
+        @include head-3;
+    }
+    
+    h4 {
+        @include head-4;
+    }
+    
+    h5 {
+        @include head-5;
+    }
+    
+    h6 {
+        @include head-6;
+    }
+    
+    p {
+        font-family: $text-font;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        color: black;
+    }
+    
+    a,
+    button {
+        font-family: $heading-font;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .wrapper {
+        @include flexbox;
+        /* flex-grow 1 to create sticky footer for flexbox*/
+        @include flex-grow(1);
+        @include flex-direction(column);
+        @include align-items(center);
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        margin: 0 auto;
+        table-layout: fixed;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    // Styles for logo
+    #joanna {
+        @include flexbox;
+        height: 8em;
+        width: 90vw;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin: 0.5em 0.5em 1em;
+        @include breakpoint(medium) {
+            margin-top: -2.5em;
+        }
+        // z-index: 9;
+    }
+    
+    #logoLink {
+        z-index: 9;
+    }
+    
+    header {
+        @include flexbox;
+        @include flex-direction(column);
+        @include align-items(center);
+        width: 70%;
+        max-width: 1000px;
+        margin: 0 auto;
+        z-index: 13;
+        margin-bottom: 3em;
+        @include breakpoint(medium) {
+            width: 100vw;
+        }
+    }
+    
+    header h1 {
+        @include flexbox;
+        @include head-2;
+        font-weight: 100;
+        margin: 0.4em 0 0.4em;
+        padding: 0.5em;
+        z-index: 7;
+    }
+    
+    // Style for animated divs in header
+    @include keyframe(mymoveleft) {
+        from {
+            left: -100vw;
+        }
+        to {
+            left: 0;
+        }
+    }
+    
+    @include keyframe(mymoveright) {
+        from {
+            right: -100vw;
+        }
+        to {
+            right: 0;
+        }
+    }
+    
+    .lineContainer,
+    .lineContainer2 {
+        @include flex-center;
+        @include flex-direction(column);
+        position: relative;
+        width: 24em;
+        z-index: 99;
+    }
+    
+    .lineContainer {
+        @include animation(mymoveleft, 1.5s, forwards);
+        &:first-child {
+            @include animation-timing-function(ease-in-out);
+        }
+    }
+    
+    .lineContainer2 {
+        @include animation(mymoveright, 1.5s, forwards);
+        &:first-child {
+            @include animation-timing-function(ease-in-out);
+        }
+    }
+    
+    .leftLine,
+    .rightLine {
+        @include flexbox;
+        width: 24em;
+        border-bottom: 1.5px solid $celeste;
+    }
+    
+    .leftLine {
+        margin-top: 1em;
+    }
+    
+    .rightLine {
+        margin-bottom: 2em;
+    }
+    
+    footer {
+        @include flex-center;
+        @include flex-direction(column);
+        color: black;
         width: 100vw;
+        height: 5em;
+        z-index: 14;
     }
-}
-
-header h1 {
-    @include flexbox;
-    @include head-2;
-    font-weight: 100;
-    margin: 0.4em 0 0.4em;
-    padding: 0.5em;
-    z-index: 7;
-}
-
-// Style for animated divs in header
-@include keyframe(mymoveleft) {
-    from {
-        left: -100vw;
+    
+    // Styles for social media icons
+    #social {
+        @include flexbox;
+        @include flex-direction(row);
+        margin: 1em 0.625em 0;
+        z-index: 11;
+        @include breakpoint(medium) {
+            @include align-self(flex-start);
+        }
     }
-    to {
-        left: 0;
+    
+    #linkedin,
+    #github {
+        width: 3.2em;
     }
-}
-
-@include keyframe(mymoveright) {
-    from {
-        right: -100vw;
+    
+    #github {
+        margin-left: 0.5em;
     }
-    to {
-        right: 0;
-    }
-}
-
-.lineContainer,
-.lineContainer2 {
-    @include flex-center;
-    @include flex-direction(column);
-    position: relative;
-    width: 24em;
-    z-index: 99;
-}
-
-.lineContainer {
-    @include animation(mymoveleft, 1.5s, forwards);
-    &:first-child {
-        @include animation-timing-function(ease-in-out);
-    }
-}
-
-.lineContainer2 {
-    @include animation(mymoveright, 1.5s, forwards);
-    &:first-child {
-        @include animation-timing-function(ease-in-out);
-    }
-}
-
-.leftLine,
-.rightLine {
-    @include flexbox;
-    width: 24em;
-    border-bottom: 1.5px solid $celeste;
-}
-
-.leftLine {
-    margin-top: 1em;
-}
-
-.rightLine {
-    margin-bottom: 2em;
-}
-
-footer {
-    @include flex-center;
-    @include flex-direction(column);
-    color: black;
-    width: 100vw;
-    height: 5em;
-    z-index: 14;
-}
-
-// Styles for social media icons
-#social {
-    @include flexbox;
-    @include flex-direction(row);
-    margin: 1em 0.625em 0;
-    z-index: 11;
-    @include breakpoint(medium) {
-        @include align-self(flex-start);
-    }
-}
-
-#linkedin,
-#github {
-    width: 3.2em;
-}
-
-#github {
-    margin-left: 0.5em;
-}
-
-// Styles for navigation
-.nav {
-    @include flexbox;
-    @include flex-direction(row);
-    @include justify-content(space-around);
-    margin-top: 0;
-    width: 100vw;
-    z-index: 14;
-    text-align: center;
-}
-
-.globalnav {
-    @include flex-center;
-    list-style: none;
-}
-
-.flexNav {
-    @include flexbox;
-    margin: 0.5em;
-}
-
-.linkBorders {
-    padding-left: 1em;
-    padding-right: 1em;
-    border-left: 1.5px solid $celeste;
-    border-right: 1.5px solid $celeste;
-}
-
-.globalnav a {
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-.globalnav a:link,
-.globalnav a:visited {
-    color: black;
-}
-
-.globalnav a:active,
-.globalnav a:hover {
-    color: $celeste;
-}
-
-main {
-    @include flex-center;
-    @include flex-direction(column);
-    width: 100%;
-    margin: 0 auto;
-}
-
-// Styling background divs
-.background {
-    @include flex-center;
-    @include flex-direction(column);
-    @include bg-gradient-l2r($red, $yellow);
-    position: fixed;
-    top: 0;
-    left: -25em;
-    width: 200em;
-    height: 70em;
-    @include transform(rotate(45deg));
-}
-
-#triangle-bottomleft {
-    @include flexbox;
-    width: 0;
-    height: 0;
-    border-bottom: 62.5em solid $celeste;
-    border-right: 62.5em solid transparent;
-    z-index: 2;
-}
-
-#triangle-topleft {
-    @include flexbox;
-    @include align-self(flex-start);
-    width: 0;
-    height: 0;
-    border-top: 31.25em solid $red;
-    border-right: 43.75em solid transparent;
-    z-index: 3;
-    margin: 2em 0 -33em;
-}
-
-.profilepic {
-    width: 20em;
-    height: 20em;
-    margin: 1em;
-    border: 10px solid $celeste;
-    overflow: hidden;
-    position: relative;
-    @include border-radius (100%);
-    @include breakpoint(large) {
-        width: 23em;
-        height: 23em;
-    }
-    @include breakpoint(xlarge) {
-        width: 25em;
-        height: 25em;
-    }
-}
-
-.img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-    @include border-radius (100%);
-    background: url('../pics/profilepic.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-.aboutSec {
-    @include flex-center;
-    @include flex-direction(column);
-    width: 100vw;
-    max-width: 1000px;
-    margin-top: 3em;
-    z-index: 8;
-    @include breakpoint(large) {
+    
+    // Styles for navigation
+    .nav {
+        @include flexbox;
         @include flex-direction(row);
         @include justify-content(space-around);
+        margin-top: 0;
+        width: 100vw;
+        z-index: 17;
+        text-align: center;
     }
-}
-
-.projectBtn {
-    padding: 1em 1.5em 1em;
-    font-size: 1em;
-    @include transparent-backgound($red,
-    0);
-    border: 1px solid black;
-    color: black;
-    @include border-radius (5px);
-    &:hover {
-        color: $celeste;
-        border: 1px solid $celeste;
+    
+    .globalnav {
+        @include flex-center;
+        list-style: none;
     }
-}
-
-.pres {
-    z-index: 10;
-}
-
-.email {
-    color: $celeste;
-}
-
-.email:hover {
-    color: white;
-}
-
-.section2,
-.section1,
-.section3,
-.projectDivs {
-    @include flex-center;
-    @include flex-direction(column);
-    width: 85vw;
-    max-width: 948px;
-    padding: 1em;
-    color: black;
-    margin: 1em 0 1em;
-    z-index: 15;
-}
-
-.section1 {
-    border: 10px solid $yellow;
-    @include breakpoint(large) {
-        width: 95vw;
+    
+    .flexNav {
+        @include flexbox;
+        margin: 0.5em;
     }
-}
-
-.projectDivs {
-    border: 10px solid $yellow;
-    position: relative;
-    @include breakpoint(large) {
-        width: 95vw;
+    
+    .linkBorders {
+        padding-left: 1em;
+        padding-right: 1em;
+        border-left: 1.5px solid $celeste;
+        border-right: 1.5px solid $celeste;
     }
-}
-
-.section2 {
-    border: 10px solid $celeste;
-    @include breakpoint(large) {
-        margin-right: 0;
-        width: 45%;
+    
+    .globalnav a {
+        font-size: 1.2em;
+        cursor: pointer;
     }
-    @include breakpoint(xlarge) {
-        margin-right: 0;
-        width: 50%;
+    
+    .globalnav a:link,
+    .globalnav a:visited {
+        color: black;
     }
-}
-
-.section3 {
-    border: 10px solid $celeste;
-    border-bottom: hidden;
-    margin-bottom: -3.1em;
-    max-width: 450px;
-    color: black;
-}
-
-.skillContainer {
-    @include flexbox;
-    @include justify-content(center);
-    position: relative;
-    z-index: 16;
-    width: 7em;
-    height: 7em;
-    @include border-radius (100%);
-    background: $red;
-    border: 10px solid $celeste;
-    color: black;
-    margin: 7em 0 7em;
-}
-
-.skills {
-    @include flex-center;
-    cursor: pointer;
-}
-
-.tools-icon {
-    height: 3.5em;
-    @include flexbox;
-}
-
-.skillContainer:hover .trans1 {
-    @include opacity(1);
-}
-
-.skillContainer:hover .trans2 {
-    @include opacity(1);
-}
-
-.skillContainer:hover .trans3 {
-    @include opacity(1);
-}
-
-.skillContainer:hover .trans4 {
-    @include opacity(1);
-}
-
-.skillContainer:hover .trans5 {
-    @include opacity(1);
-}
-
-.skillContainer:hover .trans6 {
-    @include opacity(1);
-}
-
-.trans1,
-.trans2,
-.trans3,
-.trans4,
-.trans5,
-.trans6 {
-    @include flex-center;
-    height: 5em;
-    width: 5em;
-    @include border-radius (100%);
-    background: $yellow;
-    color: black;
-    @include opacity(0);
-    position: absolute;
-    border: 10px solid $celeste;
-    @include transition-2(all,
-    0.5s,
-    ease-in-out);
-}
-
-.trans1 {
-    top: 0.5em;
-    left: -6.5em;
-}
-
-.trans2 {
-    top: 6.5em;
-    left: 4em;
-}
-
-.trans3 {
-    top: 0.5em;
-    right: -6.5em;
-}
-
-.trans4 {
-    top: -5.5em;
-    left: 4em;
-}
-
-.trans5 {
-    top: -5.5em;
-    right: 4em;
-}
-
-.trans6 {
-    top: 6.5em;
-    right: 4em;
-}
-
-.contactSec {
-    @include flex-center;
-    @include flex-direction(column);
-    width: 100vw;
-    max-width: 1000px;
-    color: black;
-    margin: 3em 0 0;
-}
-
-#contactForm {
-    @include flexbox;
-    @include flex-direction(column);
-    width: 85vw;
-    max-width: 450px;
-    margin-top: 3em;
-    margin-bottom: -62em;
-    z-index: 10;
-    border: 10px solid $celeste;
-    border-top: hidden;
-    padding: 1em;
-}
-
-.contactSec label {
-    padding: 2px 2px 2px 10px;
-    font-size: 1.2em;
-    color: black;
-}
-
-.text-field {
-    @include flexbox;
-    width: 80%;
-    max-width: 300px;
-    padding: 0.5em;
-    margin: 0.5em 0 0.5em;
-}
-
-.message-field {
-    @include flexbox;
-    padding: 0.5em;
-    width: 90%;
-    max-width: 450px;
-    height: 8em;
-    margin: 0.5em 0 1em;
-    @include breakpoint(large) {
-        height: 8em;
-    }
-}
-
-.email-2 {
-    color: black;
-    padding-top: 0.5em;
-    &:hover {
+    
+    .globalnav a:active,
+    .globalnav a:hover {
         color: $celeste;
     }
-}
-
-.formBtn {
-    @include flex-center;
-    @include align-self(center);
-    font-size: 1em;
-    font-weight: 700;
-    padding: 0.8em 1.5em 0.8em;
-    @include transparent-backgound($celeste,
-    0);
-    border: 2px solid black;
-    color: black;
-    @include border-radius (5px);
-    &:hover {
-        border: 2px solid white;
+    
+    main {
+        @include flex-center;
+        @include flex-direction(column);
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    // Styling background divs
+    .background {
+        @include flex-center;
+        @include flex-direction(column);
+        @include bg-gradient-l2r($red, $yellow);
+        position: fixed;
+        top: 0;
+        left: -25em;
+        width: 200em;
+        height: 70em;
+        @include transform(rotate(45deg));
+    }
+    
+    #triangle-bottomleft {
+        @include flexbox;
+        width: 0;
+        height: 0;
+        border-bottom: 62.5em solid $celeste;
+        border-right: 62.5em solid transparent;
+        z-index: 2;
+    }
+    
+    #triangle-topleft {
+        @include flexbox;
+        @include align-self(flex-start);
+        width: 0;
+        height: 0;
+        border-top: 31.25em solid $red;
+        border-right: 43.75em solid transparent;
+        z-index: 3;
+        margin: 2em 0 -33em;
+    }
+    
+    .profilepic {
+        width: 20em;
+        height: 20em;
+        margin: 1em;
+        border: 10px solid $celeste;
+        overflow: hidden;
+        position: relative;
+        @include border-radius (100%);
+        @include breakpoint(large) {
+            width: 23em;
+            height: 23em;
+        }
+        @include breakpoint(xlarge) {
+            width: 25em;
+            height: 25em;
+        }
+    }
+    
+    .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        @include border-radius (100%);
+        background: url('../pics/profilepic.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    
+    .aboutSec {
+        @include flex-center;
+        @include flex-direction(column);
+        width: 100vw;
+        max-width: 1000px;
+        margin-top: 3em;
+        z-index: 8;
+        @include breakpoint(large) {
+            @include flex-direction(row);
+            @include justify-content(space-around);
+        }
+    }
+    
+    .projectBtn {
+        padding: 1em 1.5em 1em;
+        font-size: 1em;
+        @include transparent-backgound($red,
+        0);
+        border: 1px solid black;
+        color: black;
+        @include border-radius (5px);
+        &:hover {
+            color: $celeste;
+            border: 1px solid $celeste;
+        }
+    }
+    
+    .pres {
+        z-index: 10;
+    }
+    
+    .email {
+        color: $celeste;
+    }
+    
+    .email:hover {
         color: white;
     }
-}
-
-@include keyframe(trianglesSpinn) {
-    0% {
-        @include transform(rotate(0deg));
+    
+    .section2,
+    .section1,
+    .section3,
+    .projectDivs {
+        @include flex-center;
+        @include flex-direction(column);
+        width: 85vw;
+        max-width: 948px;
+        padding: 1em;
+        color: black;
+        margin: 1em 0 1em;
+        z-index: 15;
     }
-    100% {
-        @include transform(rotate(360deg));
+    
+    .projectDivs {
+        z-index: 20;
     }
-}
-
-@include keyframe(trianglesSpinn2) {
-    0% {
-        @include transform(rotate(0deg));
+    
+    .section1 {
+        border: 10px solid $yellow;
+        @include breakpoint(large) {
+            width: 95vw;
+        }
     }
-    100% {
-        @include transform(rotate(-360deg));
+    
+    .projectDivs {
+        border: 10px solid $yellow;
+        position: relative;
+        @include breakpoint(large) {
+            width: 95vw;
+        }
     }
-}
-
-.animatedTriangles,
-.animatedTriangles2 {
-    @include flex-center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    &:first-child {
+    
+    .section2 {
+        border: 10px solid $celeste;
+        @include breakpoint(large) {
+            margin-right: 0;
+            width: 45%;
+        }
+        @include breakpoint(xlarge) {
+            margin-right: 0;
+            width: 50%;
+        }
+    }
+    
+    .section3 {
+        border: 10px solid $celeste;
+        border-bottom: hidden;
+        margin-bottom: -3.1em;
+        max-width: 450px;
+        color: black;
+    }
+    
+    .skillContainer {
+        @include flexbox;
+        @include justify-content(center);
+        position: relative;
+        z-index: 16;
+        width: 7em;
+        height: 7em;
+        @include border-radius (100%);
+        background: $red;
+        border: 10px solid $celeste;
+        color: black;
+        margin: 7em 0 7em;
+    }
+    
+    .skills {
+        @include flex-center;
+        cursor: pointer;
+    }
+    
+    .tools-icon {
+        height: 3.5em;
+        @include flexbox;
+    }
+    
+    .skillContainer:hover .trans1 {
+        @include opacity(1);
+    }
+    
+    .skillContainer:hover .trans2 {
+        @include opacity(1);
+    }
+    
+    .skillContainer:hover .trans3 {
+        @include opacity(1);
+    }
+    
+    .skillContainer:hover .trans4 {
+        @include opacity(1);
+    }
+    
+    .skillContainer:hover .trans5 {
+        @include opacity(1);
+    }
+    
+    .skillContainer:hover .trans6 {
+        @include opacity(1);
+    }
+    
+    .trans1,
+    .trans2,
+    .trans3,
+    .trans4,
+    .trans5,
+    .trans6 {
+        @include flex-center;
+        height: 5em;
+        width: 5em;
+        @include border-radius (100%);
+        background: $yellow;
+        color: black;
+        @include opacity(0);
         position: absolute;
-        top: 0;
+        border: 10px solid $celeste;
+        @include transition-2(all,
+        0.5s,
+        ease-in-out);
     }
-    &:nth-child(1) {
-        position: absolute;
-        top: 0;
+    
+    .trans1 {
+        top: 0.5em;
+        left: -6.5em;
     }
-    &:last-child {
-        position: absolute;
-        top: 0;
+    
+    .trans2 {
+        top: 6.5em;
+        left: 4em;
     }
-}
-
-.triangles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200%;
-    @include breakpoint(medium) {
+    
+    .trans3 {
+        top: 0.5em;
+        right: -6.5em;
+    }
+    
+    .trans4 {
+        top: -5.5em;
+        left: 4em;
+    }
+    
+    .trans5 {
+        top: -5.5em;
+        right: 4em;
+    }
+    
+    .trans6 {
+        top: 6.5em;
+        right: 4em;
+    }
+    
+    .contactSec {
+        @include flex-center;
+        @include flex-direction(column);
+        width: 100vw;
+        max-width: 1000px;
+        color: black;
+        margin: 3em 0 0;
+    }
+    
+    #contactForm {
+        @include flexbox;
+        @include flex-direction(column);
+        width: 85vw;
+        max-width: 450px;
+        margin-top: 3em;
+        margin-bottom: -62em;
+        z-index: 10;
+        border: 10px solid $celeste;
+        border-top: hidden;
+        padding: 1em;
+    }
+    
+    .contactSec label {
+        padding: 2px 2px 2px 10px;
+        font-size: 1.2em;
+        color: black;
+    }
+    
+    .text-field {
+        @include flexbox;
+        width: 80%;
+        max-width: 300px;
+        padding: 0.5em;
+        margin: 0.5em 0 0.5em;
+    }
+    
+    .message-field {
+        @include flexbox;
+        padding: 0.5em;
         width: 90%;
+        max-width: 450px;
+        height: 8em;
+        margin: 0.5em 0 1em;
+        @include breakpoint(large) {
+            height: 8em;
+        }
     }
-}
-
-.triang1 {
-    // @include opacity(0.9);
-    @include animationSpinn(trianglesSpinn,
-    9s,
-    linear,
-    infinite);
-}
-
-.triang2 {
-    // @include opacity(0.7);
-    @include animationSpinn(trianglesSpinn,
-    8s,
-    linear,
-    infinite);
-}
-
-.triang3 {
-    @include opacity(0.5);
-    @include animationSpinn(trianglesSpinn2,
-    8s,
-    linear,
-    infinite);
-}
-
-//Styles SVG's
-.cls-1 {
-    isolation: isolate;
-}
-
-.cls-2 {
-    fill: $celeste;
-}
-
-.projectSec {
-    z-index: 10;
-    @include flex-center;
-    @include flex-direction(column);
-}
-
-figcaption {
-    margin: 0.2em;
-}
-
-.projectImg {
-    width: 15em;
-}
-
-.proBoxContainer {
-    @include flex-center;
-    @include flex-direction(row);
-    @include flex-wrap(wrap);
-}
-
-.projectBox {
-    @include flex-center;
-    position: relative;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-}
-
-.projDescription {
-    @include flex-center;
-    @include flex-direction(column);
-    @include transparent-backgound($color: black, $value: 0.8);
-    width: 14em;
-    height: 12.8em;
-    padding: 1em;
-    position: absolute;
-    top: 1em;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0;
-    @include transition-2(all,
-    0.1s,
-    ease-in-out);
-    &:hover {
+    
+    .email-2 {
+        color: black;
+        padding-top: 0.5em;
+        &:hover {
+            color: $celeste;
+        }
+    }
+    
+    .formBtn {
+        @include flex-center;
+        @include align-self(center);
+        font-size: 1em;
+        font-weight: 700;
+        padding: 0.8em 1.5em 0.8em;
+        @include transparent-backgound($celeste,
+        0);
+        border: 2px solid black;
+        color: black;
+        @include border-radius (5px);
+        &:hover {
+            border: 2px solid white;
+            color: white;
+        }
+    }
+    
+    @include keyframe(trianglesSpinn) {
+        0% {
+            @include transform(rotate(0deg));
+        }
+        100% {
+            @include transform(rotate(360deg));
+        }
+    }
+    
+    @include keyframe(trianglesSpinn2) {
+        0% {
+            @include transform(rotate(0deg));
+        }
+        100% {
+            @include transform(rotate(-360deg));
+        }
+    }
+    
+    .animatedTriangles,
+    .animatedTriangles2 {
+        @include flex-center;
+        position: relative;
+        width: 98%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        &:first-child {
+            position: absolute;
+            top: 0;
+        }
+        &:nth-child(1) {
+            position: absolute;
+            top: 0;
+        }
+        &:last-child {
+            position: absolute;
+            top: 0;
+        }
+    }
+    
+    .triangles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
+    }
+    
+    .triang1 {
+        // @include opacity(0.9);
+        @include animationSpinn(trianglesSpinn,
+        9s,
+        linear,
+        infinite);
+    }
+    
+    .triang2 {
+        @include opacity(0.7);
+        @include animationSpinn(trianglesSpinn,
+        8s,
+        linear,
+        infinite);
+    }
+    
+    .triang3 {
+        @include opacity(0.5);
+        @include animationSpinn(trianglesSpinn2,
+        8s,
+        linear,
+        infinite);
+    }
+    
+    //Styles SVG's
+    .cls-1 {
+        isolation: isolate;
+    }
+    
+    .cls-2 {
+        fill: $celeste;
+    }
+    
+    .projectSec {
+        z-index: 12;
+        @include flex-center;
+        @include flex-direction(column);
+    }
+    
+    figcaption {
+        margin: 0.2em;
+    }
+    
+    .projectImg {
+        width: 15em;
+    }
+    
+    .proBoxContainer {
+        @include flex-center;
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+    }
+    
+    .projectBox {
+        @include flex-center;
+        position: relative;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+    
+    .projDescription {
+        @include flex-center;
+        @include flex-direction(column);
+        @include transparent-backgound($color: black, $value: 0.8);
+        width: 14em;
+        height: 12.8em;
+        padding: 1em;
+        position: absolute;
+        top: 1em;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0;
         @include transition-2(all,
         0.1s,
         ease-in-out);
-        @include opacity(1);
+        &:hover {
+            @include transition-2(all,
+            0.1s,
+            ease-in-out);
+            @include opacity(1);
+        }
+        ;
     }
-    ;
-}
-
-.projDescription p {
-    color: white;
-}
-
-.imgFigure {
-    @include flex-center;
-    @include flex-direction(column);
-    padding: 0.5em;
-    border: 10px solid $celeste;
-    @include transparent-backgound($color: $salmon, $value: 0.7);
-    margin: 0.5em;
-}
-
-.projDescription a {
-    font-size: 1em;
-    margin: 0 0 0.5em;
-    cursor: pointer;
-}
-
-.projDescription a:link,
-.projDescription a:visited {
-    color: $celeste;
-}
-
-.projDescription a:active,
-.projDescription a:hover {
-    color: $celeste;
-    color: white;
-}
+    
+    .projDescription p {
+        color: white;
+    }
+    
+    .imgFigure {
+        @include flex-center;
+        @include flex-direction(column);
+        padding: 0.5em;
+        border: 10px solid $celeste;
+        @include transparent-backgound($color: $salmon, $value: 0.7);
+        margin: 0.5em;
+    }
+    
+    .projDescription a {
+        font-size: 1em;
+        margin: 0 0 0.5em;
+        cursor: pointer;
+    }
+    
+    .projDescription a:link,
+    .projDescription a:visited {
+        color: $celeste;
+    }
+    
+    .projDescription a:active,
+    .projDescription a:hover {
+        color: $celeste;
+        color: white;
+    }

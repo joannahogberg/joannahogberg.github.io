@@ -497,7 +497,7 @@ footer {
   -ms-flex-pack: space-around;
   margin-top: 0;
   width: 100vw;
-  z-index: 14;
+  z-index: 17;
   text-align: center; }
 
 .globalnav {
@@ -756,6 +756,9 @@ main {
   color: black;
   margin: 1em 0 1em;
   z-index: 15; }
+
+.projectDivs {
+  z-index: 20; }
 
 .section1 {
   border: 10px solid #fffac4; }
@@ -1184,9 +1187,12 @@ main {
   -ms-align-items: center;
   align-items: center;
   position: relative;
-  width: 100%;
+  width: 98%;
   height: 100%;
-  margin: 0 auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden; }
   .animatedTriangles:first-child,
   .animatedTriangles2:first-child {
@@ -1208,10 +1214,7 @@ main {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 200%; }
-  @media (min-width: 700px) {
-    .triangles {
-      width: 90%; } }
+  width: 98%; }
 
 .triang1 {
   -webkit-animation-name: trianglesSpinn;
@@ -1237,6 +1240,8 @@ main {
   animation-iteration-count: infinite; }
 
 .triang2 {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
   -webkit-animation-name: trianglesSpinn;
   -webkit-animation-duration: 8s;
   -webkit-animation-timing-function: linear;
@@ -1291,7 +1296,7 @@ main {
   fill: #49fee3; }
 
 .projectSec {
-  z-index: 10;
+  z-index: 12;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
