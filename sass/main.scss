@@ -633,6 +633,7 @@ main {
     position: relative;
     width: 100%;
     height: 100%;
+    margin: 0 auto;
     overflow: hidden;
     &:first-child {
         position: absolute;
@@ -651,6 +652,10 @@ main {
 .triangles {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 200%;
     @include breakpoint(medium) {
         width: 90%;
@@ -713,6 +718,9 @@ figcaption {
 .projectBox {
     @include flex-center;
     position: relative;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .projDescription {
@@ -720,11 +728,14 @@ figcaption {
     @include flex-direction(column);
     @include transparent-backgound($color: black, $value: 0.8);
     width: 14em;
-    height: 13em;
+    height: 12.8em;
     padding: 1em;
     position: absolute;
     top: 1em;
-    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     opacity: 0;
     @include transition-2(all,
     0.1s,
@@ -759,10 +770,11 @@ figcaption {
 
 .projDescription a:link,
 .projDescription a:visited {
-    color: white;
+    color: $celeste;
 }
 
 .projDescription a:active,
 .projDescription a:hover {
     color: $celeste;
+    color: white;
 }

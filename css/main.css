@@ -1186,6 +1186,7 @@ main {
   position: relative;
   width: 100%;
   height: 100%;
+  margin: 0 auto;
   overflow: hidden; }
   .animatedTriangles:first-child,
   .animatedTriangles2:first-child {
@@ -1203,6 +1204,10 @@ main {
 .triangles {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 200%; }
   @media (min-width: 700px) {
     .triangles {
@@ -1351,7 +1356,10 @@ figcaption {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  position: relative; }
+  position: relative;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
 
 .projDescription {
   display: -webkit-box;
@@ -1375,11 +1383,14 @@ figcaption {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.8);
   width: 14em;
-  height: 13em;
+  height: 12.8em;
   padding: 1em;
   position: absolute;
   top: 1em;
-  margin: 0 auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   opacity: 0;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -1430,10 +1441,11 @@ figcaption {
 
 .projDescription a:link,
 .projDescription a:visited {
-  color: white; }
+  color: #49fee3; }
 
 .projDescription a:active,
 .projDescription a:hover {
-  color: #49fee3; }
+  color: #49fee3;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */
