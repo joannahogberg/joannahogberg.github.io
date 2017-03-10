@@ -3,6 +3,7 @@
 $yellow: #fffac4;
 $celeste: #49fee3;
 $red: #fe4864;
+$salmon: #fe6272;
 $heading-font: 'Josefin Sans',
 sans-serif;
 $text-font: 'Josefin Slab',
@@ -133,6 +134,14 @@ $breakpoints: ( 'xxsmall': ( min-width: 360px), 'xsmall': ( min-width: 375px), '
     align-self: $align;
 }
 
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+    -webkit-flex-wrap: $wrap;
+    -moz-flex-wrap: $wrap;
+    -ms-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+}
+
 
 /*------------- Flexbox center mixin*/
 
@@ -242,6 +251,30 @@ $breakpoints: ( 'xxsmall': ( min-width: 360px), 'xsmall': ( min-width: 375px), '
     animation-name: #{$animation};
     animation-duration: #{$duration};
     animation-fill-mode: #{$forwards};
+}
+
+@mixin animationSpinn($animation, $duration, $timing, $iteration) {
+    -webkit-animation-name: #{$animation};
+    -webkit-animation-duration: #{$duration};
+    -webkit-animation-timing-function: #{$timing};
+    -webkit-animation-iteration-count: #{$iteration};
+    /* forward prevents the animation from restarting! */
+    -moz-animation-name:#{$animation};
+    -moz-animation-duration: #{$duration};
+    -moz-animation-timing-function: #{$timing};
+    -moz-animation-iteration-count: #{$iteration};
+    -ms-animation-name:#{$animation};
+    -ms-animation-duration: #{$duration};
+    -ms-animation-timing-function: #{$timing};
+    -ms-animation-iteration-count: #{$iteration};
+    -o-animation-name: #{$animation};
+    -o-animation-duration: #{$duration};
+    -o-animation-timing-function: #{$timing};
+    -o-animation-iteration-count:#{$iteration};
+    animation-name: #{$animation};
+    animation-duration: #{$duration};
+    animation-timing-function: #{$timing};
+    animation-iteration-count: #{$iteration};
 }
 
 @mixin animation-timing-function($timing) {
