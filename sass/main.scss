@@ -405,7 +405,6 @@ main {
 
 .section1 {
     border: 10px solid $yellow;
-    position: relative;
     @include breakpoint(large) {
         width: 95vw;
     }
@@ -714,18 +713,18 @@ figcaption {
 .projectBox {
     @include flex-center;
     position: relative;
-    // @include transparent-backgound($color: $celeste, $value: 0.5)
 }
 
 .projDescription {
     @include flex-center;
     @include flex-direction(column);
-    @include transparent-backgound($color: black, $value: 0.7);
+    @include transparent-backgound($color: black, $value: 0.8);
     width: 14em;
-    height: 12.3em;
-    padding: 0 0.5em 0;
+    height: 13em;
+    padding: 1em;
     position: absolute;
-    top: 3em;
+    top: 1em;
+    margin: 0 auto;
     opacity: 0;
     @include transition-2(all,
     0.1s,
