@@ -635,20 +635,23 @@ main {
 .profilepic {
   width: 20em;
   height: 20em;
-  margin: 1em;
+  margin: 0 0 2em;
   border: 10px solid #49fee3;
   overflow: hidden;
   position: relative;
+  z-index: 22;
   -webkit-border-radius: 100%;
   border-radius: 100%;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */ }
   @media (min-width: 850px) {
     .profilepic {
+      align-self: flex-start;
       width: 23em;
       height: 23em; } }
   @media (min-width: 900px) {
     .profilepic {
+      margin: 1em 2em 0 0;
       width: 25em;
       height: 25em; } }
 
@@ -691,6 +694,7 @@ main {
   width: 100vw;
   max-width: 1000px;
   margin-top: 3em;
+  position: relative;
   z-index: 8; }
   @media (min-width: 850px) {
     .aboutSec {
@@ -774,7 +778,8 @@ main {
       width: 95vw; } }
 
 .section2 {
-  border: 10px solid #49fee3; }
+  border: 10px solid #49fee3;
+  position: relative; }
   @media (min-width: 850px) {
     .section2 {
       margin-right: 0;
@@ -783,6 +788,11 @@ main {
     .section2 {
       margin-right: 0;
       width: 50%; } }
+
+.section2 p,
+.section2 h2,
+.section2 a {
+  z-index: 25; }
 
 .section3 {
   border: 10px solid #49fee3;
@@ -1171,7 +1181,8 @@ main {
     -o-transform: rotate(-360deg);
     transform: rotate(-360deg); } }
 .animatedTriangles,
-.animatedTriangles2 {
+.animatedTriangles2,
+.animatedTriangles3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1195,17 +1206,24 @@ main {
   margin-right: auto;
   overflow: hidden; }
   .animatedTriangles:first-child,
-  .animatedTriangles2:first-child {
+  .animatedTriangles2:first-child,
+  .animatedTriangles3:first-child {
     position: absolute;
     top: 0; }
   .animatedTriangles:nth-child(1),
-  .animatedTriangles2:nth-child(1) {
+  .animatedTriangles2:nth-child(1),
+  .animatedTriangles3:nth-child(1) {
     position: absolute;
     top: 0; }
   .animatedTriangles:last-child,
-  .animatedTriangles2:last-child {
+  .animatedTriangles2:last-child,
+  .animatedTriangles3:last-child {
     position: absolute;
     top: 0; }
+
+.animatedTriangles3 {
+  opacity: 0.3;
+  filter: alpha(opacity=30); }
 
 .triangles {
   position: absolute;
@@ -1362,9 +1380,10 @@ figcaption {
   -ms-align-items: center;
   align-items: center;
   position: relative;
-  margin: 0 auto;
+  margin: 0.5em;
   left: 0;
-  right: 0; }
+  right: 0;
+  border: 10px solid #49fee3; }
 
 .projDescription {
   display: -webkit-box;
@@ -1372,11 +1391,6 @@ figcaption {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
   -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
@@ -1385,17 +1399,14 @@ figcaption {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.8);
-  width: 14em;
-  height: 12.8em;
-  padding: 1em;
+  background: #fe9a90;
+  height: 100%;
   position: absolute;
-  top: 1em;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  z-index: 30;
   opacity: 0;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -1412,7 +1423,8 @@ figcaption {
     filter: alpha(opacity=100); }
 
 .projDescription p {
-  color: white; }
+  padding: 1em;
+  color: black; }
 
 .imgFigure {
   display: -webkit-box;
@@ -1433,11 +1445,9 @@ figcaption {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0.5em;
-  border: 10px solid #49fee3;
+  padding: 1.5em;
   background: rgb(254, 98, 114);
-  background: rgba(254, 98, 114, 0.7);
-  margin: 0.5em; }
+  background: rgba(254, 98, 114, 0.7); }
 
 .projDescription a {
   font-size: 1em;

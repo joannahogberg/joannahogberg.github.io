@@ -315,16 +315,19 @@
     .profilepic {
         width: 20em;
         height: 20em;
-        margin: 1em;
+        margin: 0 0 2em;
         border: 10px solid $celeste;
         overflow: hidden;
         position: relative;
+        z-index: 22;
         @include border-radius (100%);
         @include breakpoint(large) {
+            align-self: flex-start;
             width: 23em;
             height: 23em;
         }
         @include breakpoint(xlarge) {
+            margin: 1em 2em 0 0;
             width: 25em;
             height: 25em;
         }
@@ -351,6 +354,7 @@
         width: 100vw;
         max-width: 1000px;
         margin-top: 3em;
+        position: relative;
         z-index: 8;
         @include breakpoint(large) {
             @include flex-direction(row);
@@ -419,6 +423,7 @@
     
     .section2 {
         border: 10px solid $celeste;
+        position: relative;
         @include breakpoint(large) {
             margin-right: 0;
             width: 45%;
@@ -427,6 +432,12 @@
             margin-right: 0;
             width: 50%;
         }
+    }
+    
+    .section2 p,
+    .section2 h2,
+    .section2 a {
+        z-index: 25;
     }
     
     .section3 {
@@ -627,7 +638,8 @@
     }
     
     .animatedTriangles,
-    .animatedTriangles2 {
+    .animatedTriangles2,
+    .animatedTriangles3 {
         @include flex-center;
         position: relative;
         width: 98%;
@@ -649,6 +661,10 @@
             position: absolute;
             top: 0;
         }
+    }
+    
+    .animatedTriangles3 {
+        @include opacity(0.3);
     }
     
     .triangles {
@@ -717,24 +733,31 @@
     .projectBox {
         @include flex-center;
         position: relative;
-        margin: 0 auto;
+        margin: 0.5em;
+        // padding: 0.5em;
         left: 0;
         right: 0;
+        border: 10px solid $celeste;
+        // background: black;
     }
     
     .projDescription {
-        @include flex-center;
+        // @include flex-center;
+        @include flexbox;
+        @include align-items(center);
         @include flex-direction(column);
-        @include transparent-backgound($color: black, $value: 0.8);
-        width: 14em;
-        height: 12.8em;
-        padding: 1em;
+        // @include transparent-backgound($color: $salmon, $value: 0.9);
+        background: $apricot;
+        // width: 14em;
+        height: 100%;
+        // padding: 1em;
         position: absolute;
-        top: 1em;
+        // top: 1em;
         left: 0;
         right: 0;
         margin-left: auto;
         margin-right: auto;
+        z-index: 30;
         opacity: 0;
         @include transition-2(all,
         0.1s,
@@ -749,16 +772,17 @@
     }
     
     .projDescription p {
-        color: white;
+        padding: 1em;
+        color: black;
     }
     
     .imgFigure {
         @include flex-center;
         @include flex-direction(column);
-        padding: 0.5em;
-        border: 10px solid $celeste;
+        padding: 1.5em;
+        // border: 10px solid $celeste;
         @include transparent-backgound($color: $salmon, $value: 0.7);
-        margin: 0.5em;
+        // margin: 0.5em;
     }
     
     .projDescription a {
