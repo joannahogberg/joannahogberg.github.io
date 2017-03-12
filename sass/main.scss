@@ -1,6 +1,6 @@
     @import "random";
     @import "mixins";
-    @import "sidenav";
+    // @import "sidenav";
     /* ---------------------- Preparing styles */
     
     html,
@@ -481,27 +481,7 @@
         @include flexbox;
     }
     
-    .skillContainer:hover .trans1 {
-        @include opacity(1);
-    }
-    
-    .skillContainer:hover .trans2 {
-        @include opacity(1);
-    }
-    
-    .skillContainer:hover .trans3 {
-        @include opacity(1);
-    }
-    
-    .skillContainer:hover .trans4 {
-        @include opacity(1);
-    }
-    
-    .skillContainer:hover .trans5 {
-        @include opacity(1);
-    }
-    
-    .skillContainer:hover .trans6 {
+    .skillContainer:hover .opacity {
         @include opacity(1);
     }
     

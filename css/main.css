@@ -5,99 +5,6 @@
 /*------------- Flexbox center mixin*/
 /* Mixin for tranform and transition*/
 /*Mixin for animation on contact page*/
-.sidenav {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background: #fe4864;
-  overflow-x: hidden;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  padding-top: 5em;
-  z-index: 1000; }
-
-.projects {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  z-index: 103; }
-
-.sidenav a {
-  padding: 1em 0 0.5em;
-  text-decoration: none;
-  font-size: 1.2em;
-  color: white;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
-
-.sidenav span {
-  font-size: 1.5em;
-  color: black;
-  border-bottom: 1px solid #49fee3;
-  font-family: 'Josefin Sans', sans-serif;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
-
-.sidenav a:hover,
-.offcanvas a:focus {
-  font-size: 1.5em;
-  color: #49fee3; }
-
-#close:hover {
-  font-size: 4em;
-  color: #49fee3; }
-
-.sidenav .closebtn {
-  font-size: 4em;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
-
-#slideNav {
-  transition: margin-right .3s; }
-
 /* ---------------------- Preparing styles */
 html,
 body,
@@ -857,27 +764,7 @@ main {
   display: -webkit-flex;
   display: flex; }
 
-.skillContainer:hover .trans1 {
-  opacity: 1;
-  filter: alpha(opacity=100); }
-
-.skillContainer:hover .trans2 {
-  opacity: 1;
-  filter: alpha(opacity=100); }
-
-.skillContainer:hover .trans3 {
-  opacity: 1;
-  filter: alpha(opacity=100); }
-
-.skillContainer:hover .trans4 {
-  opacity: 1;
-  filter: alpha(opacity=100); }
-
-.skillContainer:hover .trans5 {
-  opacity: 1;
-  filter: alpha(opacity=100); }
-
-.skillContainer:hover .trans6 {
+.skillContainer:hover .opacity {
   opacity: 1;
   filter: alpha(opacity=100); }
 
