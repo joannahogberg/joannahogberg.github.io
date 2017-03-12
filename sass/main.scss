@@ -105,15 +105,24 @@
     // Styles for logo
     #joanna {
         @include flexbox;
-        height: 8em;
+        height: 4em;
         width: 90vw;
         max-width: 1000px;
         margin: 0 auto;
-        margin: 0.5em 0.5em 1em;
+        margin: 0.5em;
         @include breakpoint(medium) {
-            margin-top: -2.5em;
+            margin: -2.5em 0.5em 1em;
+            height: 8em;
         }
-        // z-index: 9;
+    }
+    
+    //Styles log SVG's
+    .cls-1 {
+        isolation: isolate;
+    }
+    
+    .cls-2 {
+        fill: $celeste;
     }
     
     #logoLink {
@@ -619,6 +628,7 @@
         }
     }
     
+    //Animation for rotating triangles
     @include keyframe(trianglesSpinn) {
         0% {
             @include transform(rotate(0deg));
@@ -638,8 +648,7 @@
     }
     
     .animatedTriangles,
-    .animatedTriangles2,
-    .animatedTriangles3 {
+    .animatedTrianglesSP {
         @include flex-center;
         position: relative;
         width: 98%;
@@ -663,7 +672,7 @@
         }
     }
     
-    .animatedTriangles3 {
+    .animatedTrianglesSP {
         @include opacity(0.3);
     }
     
@@ -701,29 +710,13 @@
         infinite);
     }
     
-    //Styles SVG's
-    .cls-1 {
-        isolation: isolate;
-    }
-    
-    .cls-2 {
-        fill: $celeste;
-    }
-    
     .projectSec {
         z-index: 12;
         @include flex-center;
         @include flex-direction(column);
     }
     
-    figcaption {
-        margin: 0.2em;
-    }
-    
-    .projectImg {
-        width: 15em;
-    }
-    
+    //Styles container for projects presentation
     .proBoxContainer {
         @include flex-center;
         @include flex-direction(row);
@@ -734,25 +727,38 @@
         @include flex-center;
         position: relative;
         margin: 0.5em;
-        // padding: 0.5em;
         left: 0;
         right: 0;
         border: 10px solid $celeste;
-        // background: black;
     }
     
+    //Styles figure elem
+    .imgFigure {
+        @include flex-center;
+        @include flex-direction(column);
+        @include transparent-backgound($color: $salmon, $value: 0.7);
+        padding: 1.5em;
+    }
+    
+    figcaption {
+        margin: 0.2em;
+    }
+    
+    //Styles project img
+    .projectImg {
+        width: 15em;
+    }
+    
+    //Styles for project description with transition to display on hover/onclick
     .projDescription {
-        // @include flex-center;
         @include flexbox;
         @include align-items(center);
         @include flex-direction(column);
         // @include transparent-backgound($color: $salmon, $value: 0.9);
         background: $apricot;
-        // width: 14em;
         height: 100%;
-        // padding: 1em;
         position: absolute;
-        // top: 1em;
+        top: 0;
         left: 0;
         right: 0;
         margin-left: auto;
@@ -776,15 +782,6 @@
         color: black;
     }
     
-    .imgFigure {
-        @include flex-center;
-        @include flex-direction(column);
-        padding: 1.5em;
-        // border: 10px solid $celeste;
-        @include transparent-backgound($color: $salmon, $value: 0.7);
-        // margin: 0.5em;
-    }
-    
     .projDescription a {
         font-size: 1em;
         margin: 0 0 0.5em;
@@ -793,11 +790,10 @@
     
     .projDescription a:link,
     .projDescription a:visited {
-        color: $celeste;
+        color: black;
     }
     
     .projDescription a:active,
     .projDescription a:hover {
         color: $celeste;
-        color: white;
     }

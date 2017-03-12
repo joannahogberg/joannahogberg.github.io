@@ -242,14 +242,21 @@ button {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  height: 8em;
+  height: 4em;
   width: 90vw;
   max-width: 1000px;
   margin: 0 auto;
-  margin: 0.5em 0.5em 1em; }
+  margin: 0.5em; }
   @media (min-width: 700px) {
     #joanna {
-      margin-top: -2.5em; } }
+      margin: -2.5em 0.5em 1em;
+      height: 8em; } }
+
+.cls-1 {
+  isolation: isolate; }
+
+.cls-2 {
+  fill: #49fee3; }
 
 #logoLink {
   z-index: 9; }
@@ -1181,8 +1188,7 @@ main {
     -o-transform: rotate(-360deg);
     transform: rotate(-360deg); } }
 .animatedTriangles,
-.animatedTriangles2,
-.animatedTriangles3 {
+.animatedTrianglesSP {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1206,22 +1212,19 @@ main {
   margin-right: auto;
   overflow: hidden; }
   .animatedTriangles:first-child,
-  .animatedTriangles2:first-child,
-  .animatedTriangles3:first-child {
+  .animatedTrianglesSP:first-child {
     position: absolute;
     top: 0; }
   .animatedTriangles:nth-child(1),
-  .animatedTriangles2:nth-child(1),
-  .animatedTriangles3:nth-child(1) {
+  .animatedTrianglesSP:nth-child(1) {
     position: absolute;
     top: 0; }
   .animatedTriangles:last-child,
-  .animatedTriangles2:last-child,
-  .animatedTriangles3:last-child {
+  .animatedTrianglesSP:last-child {
     position: absolute;
     top: 0; }
 
-.animatedTriangles3 {
+.animatedTrianglesSP {
   opacity: 0.3;
   filter: alpha(opacity=30); }
 
@@ -1307,12 +1310,6 @@ main {
   animation-timing-function: linear;
   animation-iteration-count: infinite; }
 
-.cls-1 {
-  isolation: isolate; }
-
-.cls-2 {
-  fill: #49fee3; }
-
 .projectSec {
   z-index: 12;
   display: -webkit-box;
@@ -1333,12 +1330,6 @@ main {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
-
-figcaption {
-  margin: 0.2em; }
-
-.projectImg {
-  width: 15em; }
 
 .proBoxContainer {
   display: -webkit-box;
@@ -1385,6 +1376,35 @@ figcaption {
   right: 0;
   border: 10px solid #49fee3; }
 
+.imgFigure {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: rgb(254, 98, 114);
+  background: rgba(254, 98, 114, 0.7);
+  padding: 1.5em; }
+
+figcaption {
+  margin: 0.2em; }
+
+.projectImg {
+  width: 15em; }
+
 .projDescription {
   display: -webkit-box;
   display: -moz-box;
@@ -1402,6 +1422,7 @@ figcaption {
   background: #fe9a90;
   height: 100%;
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -1426,29 +1447,6 @@ figcaption {
   padding: 1em;
   color: black; }
 
-.imgFigure {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1.5em;
-  background: rgb(254, 98, 114);
-  background: rgba(254, 98, 114, 0.7); }
-
 .projDescription a {
   font-size: 1em;
   margin: 0 0 0.5em;
@@ -1456,11 +1454,10 @@ figcaption {
 
 .projDescription a:link,
 .projDescription a:visited {
-  color: #49fee3; }
+  color: black; }
 
 .projDescription a:active,
 .projDescription a:hover {
-  color: #49fee3;
-  color: white; }
+  color: #49fee3; }
 
 /*# sourceMappingURL=main.css.map */
