@@ -5,10 +5,10 @@ $celeste: #49fee3;
 $red: #fe4864;
 $salmon: #fe6272;
 $apricot:#fe9a90;
-$heading-font: 'Josefin Sans',
+$heading-font: 'Montserrat',
 sans-serif;
-$text-font: 'Josefin Slab',
-serif;
+$text-font: 'Roboto',
+sans-serif;
 
 /*------------- Mixin for breakpoints*/
 
@@ -31,8 +31,8 @@ $breakpoints: ( 'xxsmall': ( min-width: 360px), 'xsmall': ( min-width: 375px), '
     font-family: $heading-font;
     line-height: 1;
     font-size: 16px;
-    font-weight: 400;
-    color: black;
+    font-weight: 300;
+    color: #333;
 }
 
 @mixin head-1 {

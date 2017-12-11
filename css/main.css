@@ -52,69 +52,71 @@ body {
   width: 100%;
   font-size: 16px;
   background: #fffac4;
-  font-family: "Josefin Slab", serif; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; }
 
 /*------------------------typography*/
 h1 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1;
   font-size: 16px;
-  font-weight: 400;
-  color: black;
+  font-weight: 300;
+  color: #333;
   font-size: 2em; }
 
 h2 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1;
   font-size: 16px;
-  font-weight: 400;
-  color: black;
+  font-weight: 300;
+  color: #333;
   font-size: 1.5em; }
 
 h3 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1;
   font-size: 16px;
-  font-weight: 400;
-  color: black;
+  font-weight: 300;
+  color: #333;
   font-size: 1.2em; }
 
 h4 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1;
   font-size: 16px;
-  font-weight: 400;
-  color: black;
+  font-weight: 300;
+  color: #333;
   font-size: 1em; }
 
 h5 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1;
   font-size: 16px;
-  font-weight: 400;
-  color: black;
+  font-weight: 300;
+  color: #333;
   font-size: 0.75em; }
 
 h6 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1;
   font-size: 16px;
-  font-weight: 400;
-  color: black;
+  font-weight: 300;
+  color: #333;
   font-size: 0.5em; }
 
 p {
-  font-family: "Josefin Slab", serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.05em;
   color: black; }
 
 a,
 button {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #333; }
 
 .wrapper {
   display: -webkit-box;
@@ -190,23 +192,21 @@ header {
   @media (min-width: 700px) {
     header {
       width: 100vw; } }
-
-header h1 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  font-family: "Josefin Sans", sans-serif;
-  line-height: 1;
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-  font-size: 1.5em;
-  font-weight: 100;
-  margin: 0.4em 0 0.4em;
-  padding: 0.5em;
-  z-index: 7; }
+  header h1 {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 300;
+    color: #333;
+    font-size: 1.5em;
+    margin: 0.4em 0 0.4em;
+    padding: 0.5em;
+    z-index: 7; }
 
 @-webkit-keyframes mymoveleft {
   from {
@@ -447,11 +447,12 @@ footer {
 
 .globalnav a {
   font-size: 1.2em;
+  font-weight: 300;
   cursor: pointer; }
 
 .globalnav a:link,
 .globalnav a:visited {
-  color: black; }
+  color: #333; }
 
 .globalnav a:active,
 .globalnav a:hover {
@@ -581,10 +582,10 @@ main {
   border-radius: 100%;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
-  background: url("../pics/profilepic.jpg");
+  background: url("../pics/profil.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-size: 137%; }
 
 .aboutSec {
   display: -webkit-box;
@@ -627,8 +628,8 @@ main {
   font-size: 1em;
   background: rgb(254, 72, 100);
   background: rgba(254, 72, 100, 0);
-  border: 1px solid black;
-  color: black;
+  border: 1px solid #333;
+  color: #333;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background-clip: padding-box;
@@ -673,7 +674,8 @@ main {
   padding: 1em;
   color: black;
   margin: 1em 0 1em;
-  z-index: 15; }
+  z-index: 15;
+  color: #333; }
 
 .projectDivs {
   z-index: 20; }
@@ -905,8 +907,9 @@ main {
       height: 8em; } }
 
 .email-2 {
-  color: black;
-  padding-top: 0.5em; }
+  color: #333;
+  padding-top: 0.5em;
+  font-weight: 300; }
   .email-2:hover {
     color: #49fee3; }
 
@@ -934,8 +937,8 @@ main {
   padding: 0.8em 1.5em 0.8em;
   background: rgb(73, 254, 227);
   background: rgba(73, 254, 227, 0);
-  border: 2px solid black;
-  color: black;
+  border: 2px solid #333;
+  color: #333;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background-clip: padding-box;

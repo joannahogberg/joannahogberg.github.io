@@ -45,6 +45,7 @@
         font-size: 16px;
         background: $yellow;
         font-family: $text-font;
+        font-weight: 300;
     }
     /*------------------------typography*/
     
@@ -75,7 +76,7 @@
     p {
         font-family: $text-font;
         line-height: 1.5;
-        font-weight: 400;
+        font-weight: 300;
         letter-spacing: 0.05em;
         color: black;
     }
@@ -85,6 +86,7 @@
         font-family: $heading-font;
         cursor: pointer;
         text-decoration: none;
+        color: #333;
     }
     
     .wrapper {
@@ -141,17 +143,23 @@
         @include breakpoint(medium) {
             width: 100vw;
         }
+        h1 {
+            @include flexbox;
+            @include head-2;
+            margin: 0.4em 0 0.4em;
+            padding: 0.5em;
+            z-index: 7;
+        }
     }
     
-    header h1 {
-        @include flexbox;
-        @include head-2;
-        font-weight: 100;
-        margin: 0.4em 0 0.4em;
-        padding: 0.5em;
-        z-index: 7;
-    }
-    
+    // header h1 {
+    //     @include flexbox;
+    //     @include head-2;
+    //     font-weight: 100;
+    //     margin: 0.4em 0 0.4em;
+    //     padding: 0.5em;
+    //     z-index: 7;
+    // }
     // Style for animated divs in header
     @include keyframe(mymoveleft) {
         from {
@@ -268,12 +276,13 @@
     
     .globalnav a {
         font-size: 1.2em;
+        font-weight: 300;
         cursor: pointer;
     }
     
     .globalnav a:link,
     .globalnav a:visited {
-        color: black;
+        color: #333;
     }
     
     .globalnav a:active,
@@ -351,10 +360,10 @@
         height: 100%;
         width: 100%;
         @include border-radius (100%);
-        background: url('../pics/profilepic.jpg');
+        background: url('../pics/profil.jpg');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 137%;
     }
     
     .aboutSec {
@@ -376,8 +385,8 @@
         font-size: 1em;
         @include transparent-backgound($red,
         0);
-        border: 1px solid black;
-        color: black;
+        border: 1px solid #333;
+        color: #333;
         @include border-radius (5px);
         &:hover {
             color: $celeste;
@@ -409,6 +418,7 @@
         color: black;
         margin: 1em 0 1em;
         z-index: 15;
+        color: #333;
     }
     
     .projectDivs {
@@ -584,8 +594,9 @@
     }
     
     .email-2 {
-        color: black;
+        color: #333;
         padding-top: 0.5em;
+        font-weight: 300;
         &:hover {
             color: $celeste;
         }
@@ -599,8 +610,8 @@
         padding: 0.8em 1.5em 0.8em;
         @include transparent-backgound($celeste,
         0);
-        border: 2px solid black;
-        color: black;
+        border: 2px solid #333;
+        color: #333;
         @include border-radius (5px);
         &:hover {
             border: 2px solid white;
